@@ -10,6 +10,13 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
+		5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105423CF4C35001559C9 /* Debug.xcconfig */; };
+		5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105523CF4C36001559C9 /* Release.xcconfig */; };
+		5EA8105A23CF4C36001559C9 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105623CF4C36001559C9 /* Production.xcconfig */; };
+		5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105723CF4C36001559C9 /* Alpha.xcconfig */; };
+		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
+		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -72,10 +79,13 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
-		5EDCAFC723CE58AE005F8E32 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ConfigurationFiles/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		5EDCAFC823CE5D20005F8E32 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Alpha.xcconfig; path = ConfigurationFiles/Alpha.xcconfig; sourceTree = SOURCE_ROOT; };
-		5EDCAFC923CE5D30005F8E32 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ConfigurationFiles/Release.xcconfig; sourceTree = SOURCE_ROOT; };
-		5EDCAFCA23CE5D48005F8E32 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = ConfigurationFiles/Production.xcconfig; sourceTree = SOURCE_ROOT; };
+		5EA8104F23CF4604001559C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5EA8105423CF4C35001559C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		5EA8105623CF4C36001559C9 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		5EA8105723CF4C36001559C9 /* Alpha.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		5EDCAFCD23CE6177005F8E32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5EDCAFCF23CE6196005F8E32 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +161,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EA8105323CF4C35001559C9 /* ConfigurationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5EA8105423CF4C35001559C9 /* Debug.xcconfig */,
+				5EA8105523CF4C36001559C9 /* Release.xcconfig */,
+				5EA8105623CF4C36001559C9 /* Production.xcconfig */,
+				5EA8105723CF4C36001559C9 /* Alpha.xcconfig */,
+			);
+			path = ConfigurationFiles;
+			sourceTree = "<group>";
+		};
+		5EDCAFCC23CE615D005F8E32 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5EDCAFCD23CE6177005F8E32 /* LoginView.swift */,
+				5EDCAFCF23CE6196005F8E32 /* LoginView.xib */,
+				5EA8104F23CF4604001559C9 /* LoginViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
@@ -175,16 +206,14 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				5EA8105323CF4C35001559C9 /* ConfigurationFiles */,
+				5EDCAFCC23CE615D005F8E32 /* Screens */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				9D1575061CB1B27500EA395E /* ViewController.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
-				5EDCAFC723CE58AE005F8E32 /* Debug.xcconfig */,
-				5EDCAFC823CE5D20005F8E32 /* Alpha.xcconfig */,
-				5EDCAFC923CE5D30005F8E32 /* Release.xcconfig */,
-				5EDCAFCA23CE5D48005F8E32 /* Production.xcconfig */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -354,7 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */,
+				5EA8105A23CF4C36001559C9 /* Production.xcconfig in Resources */,
+				5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */,
+				5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
+				5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

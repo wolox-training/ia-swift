@@ -10,6 +10,12 @@ import UIKit
 
 class CustomBookCell: UITableViewCell {
 
+    @IBOutlet weak var view: UIView! {
+        didSet {
+            view.layer.cornerRadius = 20
+            view.layer.shadowOffset = CGSize(width: 0, height: 10)
+        }
+    }
     @IBOutlet weak var imageSource: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!

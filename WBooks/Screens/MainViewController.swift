@@ -12,10 +12,14 @@ import WolmoCore
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let _view: MainView = MainView.loadFromNib()!
     
-    var booksArray : Array = [["image": "michael", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "michael", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "michael", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
+    var booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         booksArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,6 +52,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self._view.booksTable.delegate = self
+        self._view.booksTable.dataSource = self
         let nib = UINib.init(nibName: "CustomBookCell", bundle: nil)
         self._view.booksTable.register(nib, forCellReuseIdentifier: "CustomBookCell")
     }

@@ -41,8 +41,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
-        let nib = UINib(nibName: MainViewController.cellReuseIdentifier, bundle: nil)
-        _view.booksTable.register(nib, forCellReuseIdentifier: MainViewController.cellReuseIdentifier)
+        _view.booksTable.register(cell: CustomBookCell.self)
     }
 }
 

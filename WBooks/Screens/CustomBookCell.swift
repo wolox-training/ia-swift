@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import WolmoCore
 
-class CustomBookCell: UITableViewCell {
+class CustomBookCell: UITableViewCell, NibLoadable {
 
     @IBOutlet weak var view: UIView! {
         didSet {

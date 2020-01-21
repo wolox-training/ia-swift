@@ -26,4 +26,12 @@ class CustomBookCell: UITableViewCell {
         super.awakeFromNib()
         backgroundColor = .clear
     }
+    
+    func setBookAttributes(data: [String : String]) {
+        if let imageName = data["image"] {
+            imageSource.image = UIImage(named: imageName)
+        }
+        titleLabel.text = data["title"]
+        subtitleLabel.text = data["subtitle"]
+    }
 }

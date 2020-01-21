@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     private let _view: MainView = MainView.loadFromNib()!
     
-    private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
+    private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared asdasd holaholahola jajaj jajja y mucho pero muuuucho mas por contar", "subtitle": "Sofi Oksanen"]]
     
     
     // MARK: - UIViewController
@@ -54,16 +54,9 @@ extension MainViewController: UITableViewDelegate {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainViewController.cellReuseIdentifier, for: indexPath) as? CustomBookCell else { return UITableViewCell() }
-        
+        guard let cell = tableView.dequeue(cell: CustomBookCell.self) else { return UITableViewCell() }
         let rowData = booksArray[indexPath.row]
-        
-        if let imageName = rowData["image"] {
-            cell.imageSource.image = UIImage(named: imageName)
-        }
-        cell.titleLabel.text = rowData["title"]
-        cell.subtitleLabel.text = rowData["subtitle"]
-        
+        cell.setBookAttributes(data: rowData)
         return cell
     }
     

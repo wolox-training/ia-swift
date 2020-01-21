@@ -12,8 +12,10 @@ class CustomBookCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView! {
         didSet {
-            view.layer.cornerRadius = 20
-            view.layer.shadowOffset = CGSize(width: 0, height: 10)
+            view.layer.cornerRadius = 5
+            view.layer.shadowOffset = CGSize(width: 0, height: 2)
+            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowOpacity = 0.1
         }
     }
     @IBOutlet weak var imageSource: UIImageView!
@@ -22,7 +24,7 @@ class CustomBookCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.backgroundColor = UIColor.clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

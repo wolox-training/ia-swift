@@ -30,5 +30,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _view.loginButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+
+    @objc private func buttonTapped() {
+        let mainViewController = MainViewController()
+        mainViewController.modalPresentationStyle = .fullScreen
+        present(mainViewController, animated: false, completion: nil)
     }
 }

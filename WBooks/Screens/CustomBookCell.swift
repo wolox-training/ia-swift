@@ -26,6 +26,7 @@ class CustomBookCell: UITableViewCell, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        selectionStyle = .none
     }
     
     func setBookAttributes(data: [String : String]) {

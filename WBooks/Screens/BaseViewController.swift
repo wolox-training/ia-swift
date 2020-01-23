@@ -8,20 +8,20 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+private struct Constants {
+    static let navigationBarColor: UIColor = .white
+}
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
+class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        setNavigationBarBackgroundImage()
+        setNavigationBarTintColor(Constants.navigationBarColor)
     }
     
-    func setTitle(headerTitle: String? = nil) {
-        title = headerTitle
+    func setTitle(headerTitle: String) {
+        setNavigationBarTitle(headerTitle, font: UIFont.systemFont(ofSize: 18), color: Constants.navigationBarColor)
     }
     
     func setLeftButtonImage(imageName: String) {
@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
         setNavigationRightButtons([UIBarButtonItem(image: UIImage(named: imageName), style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
     }
     
-    func setNavigationBar() {
+    func setNavigationBarBackgroundImage() {
         guard let image = UIImage(named: "bc_nav bar") else { return }
         let imageView = UIImageView(image: image)
         view.addSubview(imageView)

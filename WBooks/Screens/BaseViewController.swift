@@ -10,6 +10,7 @@ import UIKit
 
 private struct Constants {
     static let navigationBarColor: UIColor = .white
+    static let navigationBarTitleFont: UIFont = UIFont.systemFont(ofSize: 18)
 }
 
 class BaseViewController: UIViewController {
@@ -21,7 +22,8 @@ class BaseViewController: UIViewController {
     }
     
     func setTitle(headerTitle: String) {
-        setNavigationBarTitle(headerTitle, font: UIFont.systemFont(ofSize: 18), color: Constants.navigationBarColor)
+        let font =
+            setNavigationBarTitle(headerTitle, font: Constants.navigationBarTitleFont, color: Constants.navigationBarColor)
     }
     
     func setLeftButtonImage(imageName: String) {

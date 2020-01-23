@@ -13,7 +13,7 @@ class MainViewController: BaseViewController {
     private static let cellReuseIdentifier = "CustomBookCell"
     
     private let _view: MainView = MainView.loadFromNib()!
-    private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared asdasd holaholahola jajaj jajja y mucho pero muuuucho mas por contar", "subtitle": "Sofi Oksanen"]]
+    private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
     
     // MARK: - UIViewController
 
@@ -38,8 +38,8 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle(headerTitle: "LIBRARY")
-        setLeftButtonImage(imageName: "ic_notifications")
-        setRightButtonImage(imageName: "ic_search")
+        setLeftButtonImage(imageName: UIImage.notificationsIcon)
+        setRightButtonImage(imageName: UIImage.searchIcon)
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)

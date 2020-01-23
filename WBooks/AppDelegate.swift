@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: NavigationBar global styles config
         UINavigationBar.appearance().tintColor = .white
-        UINavigationBar.appearance().barTintColor = UIColor(hex: "#00ADEF")
+        UINavigationBar.appearance().barTintColor = UIColor.oceanBlue
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         return true

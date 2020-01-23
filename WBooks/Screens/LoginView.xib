@@ -33,9 +33,6 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <state key="normal" title="INGRESAR CON GOOGLE"/>
-                            <connections>
-                                <action selector="loginButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gcc-Ma-45o"/>
-                            </connections>
                         </button>
                     </subviews>
                     <constraints>

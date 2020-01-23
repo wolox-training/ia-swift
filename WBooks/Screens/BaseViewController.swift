@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     }
     
     func setNavigationBarBackgroundImage() {
-        guard let image = UIImage(named: "bc_nav bar") else { return }
+        guard let image = UIImage(named: UIImage.backgroundNavigator) else { return }
         let imageView = UIImageView(image: image)
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false

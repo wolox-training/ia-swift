@@ -16,6 +16,8 @@
 		5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */; };
 		5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */; };
 		5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */; };
+		5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78223DA153500C8103A /* UIColorExtension.swift */; };
+		5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78423DA18B800C8103A /* UIImageExtension.swift */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
 		5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105423CF4C35001559C9 /* Debug.xcconfig */; };
 		5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105523CF4C36001559C9 /* Release.xcconfig */; };
@@ -25,7 +27,6 @@
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
 		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
-		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
 		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
@@ -92,6 +93,8 @@
 		5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCell.swift; sourceTree = "<group>"; };
 		5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBookCell.xib; sourceTree = "<group>"; };
 		5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
+		5E6DD78223DA153500C8103A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5E6DD78423DA18B800C8103A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		5EA8104F23CF4604001559C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5EA8105423CF4C35001559C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -102,7 +105,6 @@
 		5EDCAFCF23CE6196005F8E32 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1575151CB1B27500EA395E /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6DD78123DA151500C8103A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E6DD78223DA153500C8103A /* UIColorExtension.swift */,
+				5E6DD78423DA18B800C8103A /* UIImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5EA8105323CF4C35001559C9 /* ConfigurationFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,11 +238,11 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				5E6DD78123DA151500C8103A /* Extensions */,
 				5EA8105323CF4C35001559C9 /* ConfigurationFiles */,
 				5EDCAFCC23CE615D005F8E32 /* Screens */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D1575061CB1B27500EA395E /* ViewController.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
@@ -486,13 +497,14 @@
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
 				5E1319F523D626A900C2CC49 /* MainView.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
-				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
+				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				5E1319F723D6293D00C2CC49 /* MainViewController.swift in Sources */,
+				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,8 +18,4 @@ class LoginView: UIView, NibLoadable {
             loginButton.layer.borderColor = UIColor.white.cgColor
         }
     }
-    
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        print("Login Pressed")
-    }
 }

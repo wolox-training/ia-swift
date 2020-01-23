@@ -37,7 +37,7 @@ class MainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitle(headerTitle: "LIBRARY")
+        setTitle(headerTitle: "MAIN_VIEW_HEADER_TITLE".localized())
         setLeftButtonImage(imageName: UIImage.notificationsIcon)
         setRightButtonImage(imageName: UIImage.searchIcon)
         _view.booksTable.delegate = self

@@ -9,7 +9,7 @@
 import UIKit
 import WolmoCore
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     private static let cellReuseIdentifier = "CustomBookCell"
     
     private let _view: MainView = MainView.loadFromNib()!
@@ -37,6 +37,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle(headerTitle: "LIBRARY")
+        setLeftButtonImage(imageName: "ic_notifications")
+        setRightButtonImage(imageName: "ic_search")
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)

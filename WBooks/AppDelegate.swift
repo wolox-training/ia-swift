@@ -35,9 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
-        // MARK: NavigationBar global config
-        let image = UIImage(named: "bc_nav bar")
-        UINavigationBar.appearance().setBackgroundImage(image, for: .default)
+        // MARK: NavigationBar global styles config
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "#00ADEF")
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         return true
     }
 

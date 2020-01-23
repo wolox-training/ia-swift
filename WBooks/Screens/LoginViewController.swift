@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
         super.init(nibName: .none, bundle: .none)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override public func loadView() {
         view = _view
     }

@@ -9,13 +9,9 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barStyle = .blackTranslucent
         setNavigationBar()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }

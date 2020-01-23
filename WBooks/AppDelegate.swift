@@ -35,10 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = WBooksNavigationController(rootViewController: LoginViewController())
         window?.makeKeyAndVisible()
         
-        // MARK: NavigationBar global styles config
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
         return true
     }
 

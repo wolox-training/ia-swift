@@ -18,12 +18,10 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarBackgroundImage()
-        setNavigationBarTintColor(Constants.navigationBarColor)
     }
     
     func setTitle(headerTitle: String) {
-        let font =
-            setNavigationBarTitle(headerTitle, font: Constants.navigationBarTitleFont, color: Constants.navigationBarColor)
+        setNavigationBarTitle(headerTitle, font: Constants.navigationBarTitleFont, color: .white)
     }
     
     func setLeftButtonImage(imageName: String) {

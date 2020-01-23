@@ -14,4 +14,15 @@ final class WBooksNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setNavigationBarStyle()
+    }
+    
+    private func setNavigationBarStyle() {
+        navigationBar.shadowImage = UIImage()
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.tintColor = .white
+    }
 }

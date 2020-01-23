@@ -24,10 +24,6 @@ class LoginViewController: UIViewController {
         super.init(nibName: .none, bundle: .none)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
-    
     override public func loadView() {
         view = _view
     }
@@ -38,8 +34,7 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func buttonTapped() {
-        let mainViewController = UINavigationController(rootViewController: MainViewController())
-        mainViewController.modalPresentationStyle = .fullScreen
-        present(mainViewController, animated: false, completion: nil)
+        let mainViewController = MainViewController()
+        navigationController?.pushViewController(mainViewController, animated: true)
     }
 }

@@ -15,6 +15,7 @@
 		5E1319F723D6293D00C2CC49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* MainViewController.swift */; };
 		5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */; };
 		5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */; };
+		5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
 		5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105423CF4C35001559C9 /* Debug.xcconfig */; };
 		5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105523CF4C36001559C9 /* Release.xcconfig */; };
@@ -90,6 +91,7 @@
 		5E1319F623D6293D00C2CC49 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCell.swift; sourceTree = "<group>"; };
 		5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBookCell.xib; sourceTree = "<group>"; };
+		5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
 		5EA8104F23CF4604001559C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5EA8105423CF4C35001559C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */,
 				5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */,
 				5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */,
+				5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */,
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
 				5E1319F523D626A900C2CC49 /* MainView.swift in Sources */,
+				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
 				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,

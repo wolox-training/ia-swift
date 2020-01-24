@@ -24,16 +24,16 @@ class BaseViewController: UIViewController {
         setNavigationBarTitle(headerTitle, font: Constants.navigationBarTitleFont, color: .white)
     }
     
-    func setLeftButtonImage(imageName: String) {
-        setNavigationLeftButtons([UIBarButtonItem(image: UIImage(named: imageName), style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
+    func setLeftButtonImage(customImage: UIImage) {
+        setNavigationLeftButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
     }
     
-    func setRightButtonImage(imageName: String) {
-        setNavigationRightButtons([UIBarButtonItem(image: UIImage(named: imageName), style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
+    func setRightButtonImage(customImage: UIImage) {
+        setNavigationRightButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
     }
     
     func setNavigationBarBackgroundImage() {
-        guard let image = UIImage(named: UIImage.backgroundNavigator) else { return }
+        let image = UIImage.backgroundNavigator
         let imageView = UIImageView(image: image)
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false

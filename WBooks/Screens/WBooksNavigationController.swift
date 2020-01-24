@@ -21,8 +21,8 @@ final class WBooksNavigationController: UINavigationController {
     }
 
     private func setNavigationBarStyle() {
-        navigationBar.shadowImage = UIImage()
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = .empty
+        navigationBar.setBackgroundImage(.empty, for: .default)
         navigationBar.tintColor = .white
     }
 }

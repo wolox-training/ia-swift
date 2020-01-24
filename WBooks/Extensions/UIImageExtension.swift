@@ -9,8 +9,9 @@
 import UIKit
 
 extension UIImage {
-    static let backIcon: String = "ic_back"
-    static let notificationsIcon: String = "ic_notifications"
-    static let searchIcon: String = "ic_search"
-    static let backgroundNavigator: String = "bc_nav bar"
+    static let empty: UIImage = UIImage()
+    static let backIcon: UIImage = UIImage(named: "ic_back") ?? UIImage()
+    static let notificationsIcon: UIImage = UIImage(named: "ic_notifications") ?? UIImage()
+    static let searchIcon: UIImage = UIImage(named: "ic_search") ?? UIImage()
+    static let backgroundNavigator: UIImage = UIImage(named: "bc_nav bar") ?? UIImage()
 }

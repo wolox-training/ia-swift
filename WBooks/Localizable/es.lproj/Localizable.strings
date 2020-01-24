@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by Nacho 2 on 23/01/2020.
+  Copyright © 2020 Wolox. All rights reserved.
+*/
+
+// MARK: - Login View
+
+"LOGIN_BUTTON" = "INGRESAR CON GOOGLE";
+"FOOTER_LOGIN_TEXT" = "Diseñado, desarrollado y usado por Woloxers";
+
+// MARK: Main View
+
+"MAIN_VIEW_HEADER_TITLE" = "LIBRERÍA";

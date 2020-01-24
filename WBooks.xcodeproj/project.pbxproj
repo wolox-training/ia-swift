@@ -18,6 +18,7 @@
 		5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */; };
 		5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78223DA153500C8103A /* UIColorExtension.swift */; };
 		5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78423DA18B800C8103A /* UIImageExtension.swift */; };
+		5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DD78C23DA2BB800C8103A /* Localizable.strings */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
 		5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105423CF4C35001559C9 /* Debug.xcconfig */; };
 		5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105523CF4C36001559C9 /* Release.xcconfig */; };
@@ -95,6 +96,8 @@
 		5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
 		5E6DD78223DA153500C8103A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5E6DD78423DA18B800C8103A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		5E6DD78B23DA2BB800C8103A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E6DD78D23DA2BC200C8103A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5EA8104F23CF4604001559C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5EA8105423CF4C35001559C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -186,6 +189,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5E6DD78723DA2B4D00C8103A /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				5E6DD78C23DA2BB800C8103A /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		5EA8105323CF4C35001559C9 /* ConfigurationFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +249,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				5E6DD78723DA2B4D00C8103A /* Localizable */,
 				5E6DD78123DA151500C8103A /* Extensions */,
 				5EA8105323CF4C35001559C9 /* ConfigurationFiles */,
 				5EDCAFCC23CE615D005F8E32 /* Screens */,
@@ -397,6 +409,7 @@
 				English,
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 9D1574F81CB1B27500EA395E;
 			productRefGroup = 9D1575021CB1B27500EA395E /* Products */;
@@ -419,6 +432,7 @@
 				5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */,
 				5EA8105A23CF4C36001559C9 /* Production.xcconfig in Resources */,
 				5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */,
+				5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */,
 				5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				5E1319F323D6267300C2CC49 /* MainView.xib in Resources */,
@@ -538,6 +552,18 @@
 			targetProxy = 9D1575211CB1B27500EA395E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E6DD78C23DA2BB800C8103A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E6DD78B23DA2BB800C8103A /* en */,
+				5E6DD78D23DA2BC200C8103A /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE39E8751D1DAED00004FE95 /* Debug */ = {

@@ -6,5 +6,11 @@
   Copyright © 2020 Wolox. All rights reserved.
 */
 
-/* MAIN VIEW */
+// MARK: - Login View
+
+"LOGIN_BUTTON" = "SIGN IN WITH GOOGLE";
+"FOOTER_LOGIN_TEXT" = "Designed, developed and used by Woloxers";
+
+// MARK: Main View
+
 "MAIN_VIEW_HEADER_TITLE" = "LIBRARY";

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func buttonTapped() {
-        let mainViewController = MainViewController()
+        let mainViewController = TabBarController()
         navigationController?.pushViewController(mainViewController, animated: true)
     }
 }

@@ -34,7 +34,8 @@ class LoginViewController: UIViewController {
     }
 
     @objc private func buttonTapped() {
-        let mainViewController = TabBarController()
-        navigationController?.pushViewController(mainViewController, animated: true)
+        let homeViewController = TabBarController()
+        homeViewController.modalPresentationStyle = .fullScreen
+        self.present(homeViewController, animated: true, completion: nil)
     }
 }

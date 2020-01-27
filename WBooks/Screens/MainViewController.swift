@@ -37,6 +37,7 @@ class MainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "MAIN_VIEW_HEADER_TITLE".localized())
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)

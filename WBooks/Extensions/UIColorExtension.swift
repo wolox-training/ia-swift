@@ -10,4 +10,5 @@ import UIKit
 
 extension UIColor {
     static let oceanBlue = UIColor(hex: "00ADEF")
+    static let creamBlue = UIColor(hex: "EAF6FA")
 }

@@ -9,10 +9,10 @@
 import UIKit
 import WolmoCore
 
-class MainViewController: BaseViewController {
+class LibraryViewController: BaseViewController {
     private static let cellReuseIdentifier = "CustomBookCell"
     
-    private let _view: MainView = MainView.loadFromNib()!
+    private let _view: LibraryView = LibraryView.loadFromNib()!
     private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
     
     // MARK: - UIViewController
@@ -25,7 +25,7 @@ class MainViewController: BaseViewController {
         fatalError("init(nibName:bundle:) has not been implemented")
     }
     
-    // MARK: - MainViewController
+    // MARK: - LibraryViewController
 
     init() {
         super.init(nibName: .none, bundle: .none)
@@ -37,7 +37,8 @@ class MainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitle(headerTitle: "MAIN_VIEW_HEADER_TITLE".localized())
+        view.layer.backgroundColor = UIColor.creamBlue?.cgColor
+        setTitle(headerTitle: "LIBRARY_VIEW_HEADER_TITLE".localized())
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
         _view.booksTable.delegate = self
@@ -46,13 +47,13 @@ class MainViewController: BaseViewController {
     }
 }
 
-extension MainViewController: UITableViewDelegate {
+extension LibraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
 }
 
-extension MainViewController: UITableViewDataSource {
+extension LibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeue(cell: CustomBookCell.self) else { return UITableViewCell() }
         let rowData = booksArray[indexPath.row]

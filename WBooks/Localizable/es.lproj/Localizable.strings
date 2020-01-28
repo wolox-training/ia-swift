@@ -13,4 +13,12 @@
 
 // MARK: Main View
 
-"MAIN_VIEW_HEADER_TITLE" = "LIBRERÍA";
+"LIBRARY_VIEW_HEADER_TITLE" = "LIBRERÍA";
+
+// MARK: Tab Bar
+
+"LIBRARY_TAB_TITLE" = "Librería";
+"WISH_LIST_TAB_TITLE" = "Lista de deseos";
+"ADD_NEW_TAB_TITLE" = "Agregar Nuevo";
+"RENTALS_TAB_TITLE" = "Alquileres";
+"SETTINGS_TAB_TITLE" = "Configuración";

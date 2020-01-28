@@ -10,11 +10,13 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
-		5E1319F323D6267300C2CC49 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319F223D6267300C2CC49 /* MainView.xib */; };
-		5E1319F523D626A900C2CC49 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F423D626A900C2CC49 /* MainView.swift */; };
-		5E1319F723D6293D00C2CC49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* MainViewController.swift */; };
+		5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319F223D6267300C2CC49 /* LibraryView.xib */; };
+		5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F423D626A900C2CC49 /* LibraryView.swift */; };
+		5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */; };
 		5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */; };
 		5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */; };
+		5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DD923DBB47500430E41 /* TabBarController.swift */; };
+		5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */; };
 		5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */; };
 		5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78223DA153500C8103A /* UIColorExtension.swift */; };
 		5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78423DA18B800C8103A /* UIImageExtension.swift */; };
@@ -88,11 +90,13 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
-		5E1319F223D6267300C2CC49 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		5E1319F423D626A900C2CC49 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		5E1319F623D6293D00C2CC49 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5E1319F223D6267300C2CC49 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
+		5E1319F423D626A900C2CC49 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCell.swift; sourceTree = "<group>"; };
 		5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBookCell.xib; sourceTree = "<group>"; };
+		5E4D8DD923DBB47500430E41 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
 		5E6DD78223DA153500C8103A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5E6DD78423DA18B800C8103A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
@@ -214,13 +218,15 @@
 				5EDCAFCD23CE6177005F8E32 /* LoginView.swift */,
 				5EDCAFCF23CE6196005F8E32 /* LoginView.xib */,
 				5EA8104F23CF4604001559C9 /* LoginViewController.swift */,
-				5E1319F223D6267300C2CC49 /* MainView.xib */,
-				5E1319F423D626A900C2CC49 /* MainView.swift */,
-				5E1319F623D6293D00C2CC49 /* MainViewController.swift */,
+				5E1319F223D6267300C2CC49 /* LibraryView.xib */,
+				5E1319F423D626A900C2CC49 /* LibraryView.swift */,
+				5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */,
 				5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */,
 				5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */,
 				5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */,
 				5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */,
+				5E4D8DD923DBB47500430E41 /* TabBarController.swift */,
+				5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -435,7 +441,7 @@
 				5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */,
 				5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
-				5E1319F323D6267300C2CC49 /* MainView.xib in Resources */,
+				5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */,
 				5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,8 +514,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */,
+				5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */,
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
-				5E1319F523D626A900C2CC49 /* MainView.swift in Sources */,
+				5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */,
+				5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
@@ -517,7 +525,7 @@
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
-				5E1319F723D6293D00C2CC49 /* MainViewController.swift in Sources */,
+				5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */,
 				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

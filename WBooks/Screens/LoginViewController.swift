@@ -12,6 +12,10 @@ import WolmoCore
 class LoginViewController: UIViewController {
     private let _view: LoginView = LoginView.loadFromNib()!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -36,6 +40,6 @@ class LoginViewController: UIViewController {
     @objc private func buttonTapped() {
         let homeViewController = TabBarController()
         homeViewController.modalPresentationStyle = .fullScreen
-        self.present(homeViewController, animated: true, completion: nil)
+        present(homeViewController, animated: true, completion: nil)
     }
 }

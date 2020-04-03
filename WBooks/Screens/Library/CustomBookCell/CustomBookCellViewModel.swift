@@ -9,15 +9,15 @@
 import UIKit
 
 class CustomBookCellViewModel {
-    var bookModel: Book
+    let bookModel: Book
     
     init(bookModel: Book) {
         self.bookModel = bookModel
     }
     
     var image: UIImage {
-        guard let imageName = bookModel.image else { return UIImage() }
-        return UIImage(named: imageName) ?? UIImage()
+        guard let imageName = bookModel.image, let image = UIImage(named: imageName) else { return UIImage() }
+        return image
     }
     
     var title: String {

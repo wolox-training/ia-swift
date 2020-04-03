@@ -41,12 +41,14 @@ class LibraryViewController: BaseViewController {
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
         setupTableView()
+        _libraryViewModel.getBooks()
     }
     
     func setupTableView() {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
+        _libraryViewModel.reloadTableView = _view.booksTable.reloadData
     }
 }
 

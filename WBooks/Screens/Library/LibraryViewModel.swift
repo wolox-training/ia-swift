@@ -7,14 +7,16 @@
 //
 import UIKit
 
-// Mock Data
-let book1 = Book(title: "The best book in the world", author: "Peter Sjermstrom", image: "img_book2")
-let book2 = Book(title: "A little bird told me", author: "Timpthy Cross", image: "img_book3")
-let book3 = Book(title: "When the doves desappeared", author: "Sofi Oksanen", image: "img_book4")
-
 class LibraryViewModel {
+    let bookRepository = BookRepository()
     
-    var booksList: [Book] = [book1, book2, book3]
+    var reloadTableView = {}
+    
+    var booksList: [Book] = [Book]() {
+        didSet {
+            self.reloadTableView()
+        }
+    }
     
     var numberOfBooks: Int {
         return booksList.count
@@ -22,5 +24,18 @@ class LibraryViewModel {
     
     func getCellViewModel(at indexPath: IndexPath) -> CustomBookCellViewModel {
         CustomBookCellViewModel(bookModel: booksList[indexPath.row])
+    }
+    
+    // API request
+    func getBooks() {
+        let onSuccess = { books in
+            self.booksList = books
+        }
+                
+        let onError = { error in
+            print(error)
+        }
+                
+        bookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
 }

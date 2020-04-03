@@ -17,7 +17,8 @@ class TabBarController: UITabBarController {
     }
     
     func setupTabs() {
-        let main = WBooksNavigationController(rootViewController: LibraryViewController())
+        let libraryViewModel = LibraryViewModel()
+        let main = WBooksNavigationController(rootViewController: LibraryViewController(viewModel: libraryViewModel))
         main.tabBarItem = UITabBarItem(title: "LIBRARY_TAB_TITLE".localized(), image: UIImage.libraryIcon, tag: 0)
         main.tabBarItem.selectedImage = UIImage.libraryActiveIcon
         let wishList = WishListViewController()

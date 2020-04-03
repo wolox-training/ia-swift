@@ -10,7 +10,7 @@ import UIKit
 import WolmoCore
 
 class CustomBookCell: UITableViewCell, NibLoadable {
-
+    
     @IBOutlet weak var view: UIView! {
         didSet {
             view.layer.cornerRadius = 5
@@ -29,11 +29,9 @@ class CustomBookCell: UITableViewCell, NibLoadable {
         selectionStyle = .none
     }
     
-    func setBookAttributes(data: [String : String]) {
-        if let imageName = data["image"] {
-            imageSource.image = UIImage(named: imageName)
-        }
-        titleLabel.text = data["title"]
-        subtitleLabel.text = data["subtitle"]
+    func setBookAttributes(cellVM: CustomBookCellViewModel) {
+        imageSource.image = cellVM.image
+        titleLabel.text = cellVM.title
+        subtitleLabel.text = cellVM.author
     }
 }

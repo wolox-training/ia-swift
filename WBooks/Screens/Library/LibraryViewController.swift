@@ -10,10 +10,8 @@ import UIKit
 import WolmoCore
 
 class LibraryViewController: BaseViewController {
-    private static let cellReuseIdentifier = "CustomBookCell"
-    
+    private let _libraryViewModel: LibraryViewModel
     private let _view: LibraryView = LibraryView.loadFromNib()!
-    private let booksArray : Array = [["image": "img_book2", "title": "The best book in the world", "subtitle": "Peter Sjermstrom"], ["image": "img_book3", "title": "A little bird told me", "subtitle": "Timpthy Cross"], ["image": "img_book4", "title": "When the doves desappeared", "subtitle": "Sofi Oksanen"]]
     
     // MARK: - UIViewController
 
@@ -27,7 +25,8 @@ class LibraryViewController: BaseViewController {
     
     // MARK: - LibraryViewController
 
-    init() {
+    init(viewModel: LibraryViewModel) {
+        _libraryViewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }
 
@@ -41,6 +40,10 @@ class LibraryViewController: BaseViewController {
         setTitle(headerTitle: "LIBRARY_VIEW_HEADER_TITLE".localized())
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
+        setupTableView()
+    }
+    
+    func setupTableView() {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
@@ -49,19 +52,19 @@ class LibraryViewController: BaseViewController {
 
 extension LibraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        return 100
     }
 }
 
 extension LibraryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeue(cell: CustomBookCell.self) else { return UITableViewCell() }
-        let rowData = booksArray[indexPath.row]
-        cell.setBookAttributes(data: rowData)
+        let cellVM = _libraryViewModel.getCellViewModel(at: indexPath)
+        cell.setBookAttributes(cellVM: cellVM)
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        booksArray.count
+        _libraryViewModel.numberOfBooks
     }
 }

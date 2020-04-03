@@ -29,6 +29,9 @@
 		5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */; };
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
 		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
+		5EFF0EB8243615B60044F96E /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF0EB7243615B60044F96E /* LibraryViewModel.swift */; };
+		5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF0EB92436166C0044F96E /* CustomBookCellViewModel.swift */; };
+		5EFF0EC124368B4A0044F96E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFF0EC024368B4A0044F96E /* Book.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -110,6 +113,9 @@
 		5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5EDCAFCD23CE6177005F8E32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5EDCAFCF23CE6196005F8E32 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		5EFF0EB7243615B60044F96E /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		5EFF0EB92436166C0044F96E /* CustomBookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCellViewModel.swift; sourceTree = "<group>"; };
+		5EFF0EC024368B4A0044F96E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,23 +218,65 @@
 			path = ConfigurationFiles;
 			sourceTree = "<group>";
 		};
-		5EDCAFCC23CE615D005F8E32 /* Screens */ = {
+		5EBAA7032431809F005D35E7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5EFF0EC2243691B50044F96E /* CustomBookCell */,
+				5E1319F223D6267300C2CC49 /* LibraryView.xib */,
+				5E1319F423D626A900C2CC49 /* LibraryView.swift */,
+				5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */,
+				5EFF0EB7243615B60044F96E /* LibraryViewModel.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		5EBAA704243180F1005D35E7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				5EDCAFCD23CE6177005F8E32 /* LoginView.swift */,
 				5EDCAFCF23CE6196005F8E32 /* LoginView.xib */,
 				5EA8104F23CF4604001559C9 /* LoginViewController.swift */,
-				5E1319F223D6267300C2CC49 /* LibraryView.xib */,
-				5E1319F423D626A900C2CC49 /* LibraryView.swift */,
-				5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */,
-				5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */,
-				5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5EBAA70524318121005D35E7 /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */,
+			);
+			path = WishList;
+			sourceTree = "<group>";
+		};
+		5EDCAFCC23CE615D005F8E32 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5EBAA70524318121005D35E7 /* WishList */,
+				5EBAA704243180F1005D35E7 /* Login */,
+				5EBAA7032431809F005D35E7 /* Library */,
 				5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */,
 				5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */,
 				5E4D8DD923DBB47500430E41 /* TabBarController.swift */,
-				5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		5EFF0EBF24368B3B0044F96E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EFF0EC024368B4A0044F96E /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5EFF0EC2243691B50044F96E /* CustomBookCell */ = {
+			isa = PBXGroup;
+			children = (
+				5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */,
+				5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */,
+				5EFF0EB92436166C0044F96E /* CustomBookCellViewModel.swift */,
+			);
+			path = CustomBookCell;
 			sourceTree = "<group>";
 		};
 		9D1574F81CB1B27500EA395E = {
@@ -255,6 +303,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				5EFF0EBF24368B3B0044F96E /* Models */,
 				5E6DD78723DA2B4D00C8103A /* Localizable */,
 				5E6DD78123DA151500C8103A /* Extensions */,
 				5EA8105323CF4C35001559C9 /* ConfigurationFiles */,
@@ -523,9 +572,12 @@
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
+				5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				5EFF0EC124368B4A0044F96E /* Book.swift in Sources */,
 				5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */,
+				5EFF0EB8243615B60044F96E /* LibraryViewModel.swift in Sources */,
 				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

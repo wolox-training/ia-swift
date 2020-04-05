@@ -49,6 +49,20 @@ class LibraryViewController: BaseViewController {
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
         _libraryViewModel.reloadTableView = _view.booksTable.reloadData
+        _libraryViewModel.updateLoadingStatus = { [weak self] () in
+            DispatchQueue.main.async {
+                let isLoading = self?._libraryViewModel.isLoading ?? false
+                if isLoading {
+                    self?._view.activityIndicator.isHidden = false
+                    self?._view.activityIndicator.startAnimating()
+                    self?._view.booksTable.alpha = 0.0
+                } else {
+                    self?._view.activityIndicator.isHidden = true
+                    self?._view.activityIndicator.stopAnimating()
+                    self?._view.booksTable.alpha = 1.0
+                }
+            }
+        }
     }
 }
 

@@ -11,10 +11,17 @@ class LibraryViewModel {
     let bookRepository = BookRepository()
     
     var reloadTableView = {}
+    var updateLoadingStatus = {}
     
     var booksList: [Book] = [Book]() {
         didSet {
             self.reloadTableView()
+        }
+    }
+    
+    var isLoading: Bool = false {
+        didSet {
+            self.updateLoadingStatus()
         }
     }
     
@@ -28,14 +35,18 @@ class LibraryViewModel {
     
     // API request
     func getBooks() {
-        let onSuccess = { books in
+        isLoading = true
+        
+        let onSuccess: ([Book]) -> Void = { books in
+            self.isLoading = false
             self.booksList = books
         }
-                
-        let onError = { error in
+        
+        let onError: (Error) -> Void = { error in
+            self.isLoading = false
             print(error)
         }
-                
+        
         bookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
     }
 }

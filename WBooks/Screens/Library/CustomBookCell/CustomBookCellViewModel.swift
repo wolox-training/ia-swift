@@ -15,9 +15,9 @@ class CustomBookCellViewModel {
         self.bookModel = bookModel
     }
     
-    var image: String {
-        guard let imageName = bookModel.image else { return "" }
-        return imageName
+    var image: String? {
+        guard let imageName = bookModel.image else { return nil }
+        return imageName != "" ? imageName : nil
     }
     
     var title: String {

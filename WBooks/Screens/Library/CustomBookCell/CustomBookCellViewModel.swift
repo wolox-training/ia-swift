@@ -15,9 +15,9 @@ class CustomBookCellViewModel {
         self.bookModel = bookModel
     }
     
-    var image: UIImage {
-        guard let imageName = bookModel.image, let image = UIImage(named: imageName) else { return UIImage() }
-        return image
+    var image: String {
+        guard let imageName = bookModel.image else { return "" }
+        return imageName
     }
     
     var title: String {

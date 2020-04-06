@@ -17,17 +17,6 @@ struct Book: Codable {
     let year: String
     let image: String?
     let status: String
-    
-    public init(from: Decoder) throws {
-        let container = try from.container(keyedBy: BookKey.self)
-        id = try container.decode(Int.self, forKey: .id)
-        title = try container.decode(String.self, forKey: .title)
-        author = try container.decode(String.self, forKey: .author)
-        genre = try container.decode(String.self, forKey: .genre)
-        year = try container.decode(String.self, forKey: .year)
-        image = try container.decode(String.self, forKey: .image)
-        status = try container.decode(String.self, forKey: .status)
-    }
 
 }
 

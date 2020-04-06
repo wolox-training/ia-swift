@@ -10,11 +10,11 @@ import Foundation
 import Result
 import Alamofire
 
-internal class BookRepository {
+class BookRepository {
     
     let url = URL(string: "https://swift-training-backend.herokuapp.com/books")!
     
-    public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         request(url, method: .get).responseJSON { response in
                 switch response.result {
                 case .success(let value):
@@ -32,7 +32,6 @@ internal class BookRepository {
                 }
             }
     }
-
 }
 
 enum BookError: Error {

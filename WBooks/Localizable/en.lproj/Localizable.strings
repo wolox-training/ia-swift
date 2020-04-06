@@ -14,6 +14,7 @@
 // MARK: Main View
 
 "LIBRARY_VIEW_HEADER_TITLE" = "LIBRARY";
+"BOOK_DETAILS_HEADER_TITLE" = "BOOK DETAIL";
 
 // MARK: Tab Bar
 
@@ -22,3 +23,8 @@
 "ADD_NEW_TAB_TITLE" = "Add New";
 "RENTALS_TAB_TITLE" = "Rentals";
 "SETTINGS_TAB_TITLE" = "Settings";
+
+// MARK: Book Details View
+
+"RENT" = "RENT";
+"TO_WISH_LIST" = "ADD TO WISHLIST";

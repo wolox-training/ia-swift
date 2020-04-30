@@ -15,13 +15,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-Bb-aG2">
-                    <rect key="frame" x="20" y="64" width="374" height="306"/>
+                    <rect key="frame" x="20" y="84" width="374" height="306"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-xA-hUK">
                             <rect key="frame" x="30" y="8" width="314" height="148"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQM-sG-suP">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LQM-sG-suP">
                                     <rect key="frame" x="0.0" y="7" width="69" height="141"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="69" id="Q93-q2-zmi"/>
+                                        <constraint firstAttribute="height" constant="141" id="fHO-L5-3Wh"/>
+                                    </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-Dy-s6J">
                                     <rect key="frame" x="101" y="7" width="213" height="141"/>
@@ -59,6 +63,9 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="LQM-sG-suP" firstAttribute="leading" secondItem="4iD-xA-hUK" secondAttribute="leading" id="cRP-BW-M79"/>
+                            </constraints>
                             <edgeInsets key="layoutMargins" top="7" left="0.0" bottom="0.0" right="0.0"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q62-FE-5Mr">
@@ -94,6 +101,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="q62-FE-5Mr" secondAttribute="trailing" constant="30" id="Vdp-Su-MUY"/>
                         <constraint firstItem="q62-FE-5Mr" firstAttribute="leading" secondItem="xrs-Bb-aG2" secondAttribute="leading" constant="30" id="bmW-tM-V2I"/>
@@ -106,13 +114,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xrs-Bb-aG2" secondAttribute="trailing" constant="20" id="Dyy-GF-B9H"/>
+                <constraint firstItem="xrs-Bb-aG2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Gru-6H-pzV"/>
                 <constraint firstItem="xrs-Bb-aG2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KJk-Gi-eLx"/>
-                <constraint firstItem="xrs-Bb-aG2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="xMW-Vr-S3u"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="addToWishButton" destination="KbC-cm-urq" id="3nI-0P-DHg"/>
                 <outlet property="bookAuthor" destination="bf9-ZQ-uGT" id="6ja-W0-0fD"/>
+                <outlet property="bookCard" destination="xrs-Bb-aG2" id="GB6-YR-kjN"/>
                 <outlet property="bookGen" destination="ytv-qt-hGm" id="F5G-cS-GyL"/>
                 <outlet property="bookImage" destination="LQM-sG-suP" id="oKz-Rg-2VO"/>
                 <outlet property="bookStatus" destination="XX1-gh-Og3" id="sLT-y4-uQM"/>

@@ -23,4 +23,15 @@ class BookDetailsViewModel {
             self.updateLoadingStatus()
         }
     }
+    
+    func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
+        let rentSuccess = {
+            onSuccess()
+        }
+        let rentError: (Error) -> Void = { error in
+            onError()
+            print(error)
+        }
+        bookRepository.rendBook(bookId: self.bookModel.id, onSuccess: rentSuccess, onError: rentError)
+    }
 }

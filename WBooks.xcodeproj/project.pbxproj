@@ -15,6 +15,8 @@
 		5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */; };
 		5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */; };
 		5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */; };
+		5E242165245B66B10091223D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242164245B66B10091223D /* UIButtonExtension.swift */; };
+		5E242167245B6FEB0091223D /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242166245B6FEB0091223D /* UIStackViewExtension.swift */; };
 		5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435DFD2437630B006F3B98 /* BookRepository.swift */; };
 		5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */; };
 		5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */; };
@@ -104,6 +106,8 @@
 		5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCell.swift; sourceTree = "<group>"; };
 		5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBookCell.xib; sourceTree = "<group>"; };
+		5E242164245B66B10091223D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		5E242166245B6FEB0091223D /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		5E435DFD2437630B006F3B98 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				5E6DD78223DA153500C8103A /* UIColorExtension.swift */,
 				5E6DD78423DA18B800C8103A /* UIImageExtension.swift */,
 				5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */,
+				5E242164245B66B10091223D /* UIButtonExtension.swift */,
+				5E242166245B6FEB0091223D /* UIStackViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,12 +604,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */,
+				5E242167245B6FEB0091223D /* UIStackViewExtension.swift in Sources */,
 				5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */,
 				5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */,
 				5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */,
 				5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */,
 				5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */,
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
+				5E242165245B66B10091223D /* UIButtonExtension.swift in Sources */,
 				5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */,
 				5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,

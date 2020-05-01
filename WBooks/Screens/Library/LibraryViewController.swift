@@ -84,7 +84,7 @@ extension LibraryViewController: UITableViewDataSource {
         _libraryViewModel.numberOfBooks
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let bookDetailsVM = BookDetailsViewModel(bookModel: _libraryViewModel.booksList[indexPath.row])
         let bookVC = BookDetailsViewController(viewModel: bookDetailsVM)
         navigationController?.pushViewController(bookVC, animated: true)

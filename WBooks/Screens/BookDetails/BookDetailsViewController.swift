@@ -37,6 +37,7 @@ class BookDetailsViewController: BaseViewController {
         _view.bookYear.text = _bookDetailsViewModel.bookModel.year
         _view.bookAuthor.text = _bookDetailsViewModel.bookModel.author
         _view.bookStatus.text = _bookDetailsViewModel.bookModel.status
+        _view.updateStyles(newStatus: _bookDetailsViewModel.bookModel.status)
         if _bookDetailsViewModel.bookModel.image != nil {
             _view.bookImage.loadUrl(from: _bookDetailsViewModel.bookModel.image ?? "")
         } else {

@@ -15,8 +15,8 @@ extension UIStackView {
         subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         insertSubview(subView, at: 0)
         subView.layer.cornerRadius = 5
-        subView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        subView.layer.shadowOffset = CGSize(width: 0, height: 1)
         subView.layer.shadowColor = UIColor.black.cgColor
-        subView.layer.shadowOpacity = 0.1
+        subView.layer.shadowOpacity = 0.05
     }
 }

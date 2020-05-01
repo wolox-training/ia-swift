@@ -17,11 +17,7 @@ class BookDetailsView: UIView, NibLoadable {
         }
     }
     @IBOutlet weak var bookTitle: UILabel!
-    @IBOutlet weak var bookStatus: UILabel! {
-        didSet {
-            bookStatus.textColor = bookStatus.text == "Unavailable" ? UIColor.creamRed : UIColor.creamGreen
-        }
-    }
+    @IBOutlet weak var bookStatus: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookYear: UILabel!
     @IBOutlet weak var bookGen: UILabel!
@@ -44,4 +40,8 @@ class BookDetailsView: UIView, NibLoadable {
         }
     }
     
+    // MARK: - update status label
+    func updateStyles(newStatus: String) {
+        bookStatus.textColor = newStatus == "Unavailable" ? UIColor.creamRed : UIColor.creamGreen
+    }
 }

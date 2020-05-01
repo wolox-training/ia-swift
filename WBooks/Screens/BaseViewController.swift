@@ -32,6 +32,10 @@ class BaseViewController: UIViewController {
         setNavigationRightButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
     }
     
+    func setNavigationBackButton() {
+        setNavigationBarBackButton(UIImage.backIcon)
+    }
+    
     func setNavigationBarBackgroundImage() {
         let image = UIImage.backgroundNavigator
         let imageView = UIImageView(image: image)

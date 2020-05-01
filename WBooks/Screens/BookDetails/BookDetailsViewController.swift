@@ -48,7 +48,7 @@ class BookDetailsViewController: BaseViewController {
         super.viewDidLoad()
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "BOOK_DETAILS_HEADER_TITLE".localized())
-        setLeftButtonImage(customImage: UIImage.backIcon)
+        setNavigationBackButton()
         _view.rentButton.addTarget(self, action: #selector(rentButtonTapped), for: .touchUpInside)
     }
     

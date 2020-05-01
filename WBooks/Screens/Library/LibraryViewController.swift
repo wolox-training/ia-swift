@@ -12,7 +12,6 @@ import WolmoCore
 class LibraryViewController: BaseViewController {
     private let _libraryViewModel: LibraryViewModel
     private let _view: LibraryView = LibraryView.loadFromNib()!
-    
     // MARK: - UIViewController
 
     required public init?(coder aDecoder: NSCoder) {
@@ -41,26 +40,37 @@ class LibraryViewController: BaseViewController {
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
         setupTableView()
-        _libraryViewModel.getBooks()
+        updateLoadingDisplay(loading: true)
+        _libraryViewModel.getBooks(onSuccess: fetchDataSuccess, onError: fetchDataError)
     }
     
     func setupTableView() {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
-        _libraryViewModel.reloadTableView = _view.booksTable.reloadData
-        _libraryViewModel.updateLoadingStatus = { [weak self] () in
-            DispatchQueue.main.async {
-                let isLoading = self?._libraryViewModel.isLoading ?? false
-                if isLoading {
-                    self?._view.activityIndicator.isHidden = false
-                    self?._view.activityIndicator.startAnimating()
-                    self?._view.booksTable.alpha = 0.0
-                } else {
-                    self?._view.activityIndicator.isHidden = true
-                    self?._view.activityIndicator.stopAnimating()
-                    self?._view.booksTable.alpha = 1.0
-                }
+
+            
+        }
+    func fetchDataSuccess() {
+        _view.booksTable.reloadData()
+        updateLoadingDisplay(loading: false)
+    }
+    
+    func fetchDataError() {
+        self._view.booksTable.reloadData()
+        updateLoadingDisplay(loading: false)
+    }
+    
+    func updateLoadingDisplay(loading: Bool) {
+        DispatchQueue.main.async {
+            if loading {
+                self._view.activityIndicator.isHidden = false
+                self._view.activityIndicator.startAnimating()
+                self._view.booksTable.alpha = 0.0
+            } else {
+                self._view.activityIndicator.isHidden = true
+                self._view.activityIndicator.stopAnimating()
+                self._view.booksTable.alpha = 1.0
             }
         }
     }

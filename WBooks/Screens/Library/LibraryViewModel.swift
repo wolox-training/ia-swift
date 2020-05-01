@@ -10,20 +10,7 @@ import UIKit
 class LibraryViewModel {
     let bookRepository = BookRepository()
     
-    var reloadTableView = {}
-    var updateLoadingStatus = {}
-    
-    var booksList: [Book] = [Book]() {
-        didSet {
-            self.reloadTableView()
-        }
-    }
-    
-    var isLoading: Bool = false {
-        didSet {
-            self.updateLoadingStatus()
-        }
-    }
+    var booksList: [Book] = []
     
     var numberOfBooks: Int {
         return booksList.count
@@ -34,19 +21,18 @@ class LibraryViewModel {
     }
     
     // API request
-    func getBooks() {
-        isLoading = true
+    func getBooks(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         
-        let onSuccess: ([Book]) -> Void = { books in
-            self.isLoading = false
+        let fetchSuccess: ([Book]) -> Void = { books in
             self.booksList = books
+            onSuccess()
         }
         
         let onError: (Error) -> Void = { error in
-            self.isLoading = false
             print(error)
+            onError()
         }
         
-        bookRepository.fetchBooks(onSuccess: onSuccess, onError: onError)
+        bookRepository.fetchBooks(onSuccess: fetchSuccess, onError: onError)
     }
 }

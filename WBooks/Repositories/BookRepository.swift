@@ -10,7 +10,7 @@ import Foundation
 import Result
 import Alamofire
 
-internal class BookRepository {
+class BookRepository {
     
     let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
     let header: HTTPHeaders = ["Content-Type": "application/json"]
@@ -20,11 +20,7 @@ internal class BookRepository {
         request(endpoint, method: .get).responseJSON { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
-                        onError(BookError.decodeError)
-                        return
-                    }
-                    guard let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
+                    guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []), let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
                         onError(BookError.decodeError)
                         return
                     }
@@ -55,7 +51,6 @@ internal class BookRepository {
             }
         }
     }
-
 }
 
 enum BookError: Error {

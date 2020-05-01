@@ -16,6 +16,7 @@ class BookDetailsView: UIView, NibLoadable {
             bookCard.applyCardStyle(backgroundColor: UIColor.white)
         }
     }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookStatus: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
@@ -43,5 +44,17 @@ class BookDetailsView: UIView, NibLoadable {
     // MARK: - update status label
     func updateStyles(newStatus: String) {
         bookStatus.textColor = newStatus == "Unavailable" ? UIColor.creamRed : UIColor.creamGreen
+    }
+    
+    func updateLoading(isLoading: Bool) {
+        if isLoading {
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
+            self.bookCard.alpha = 0.5
+        } else {
+            self.self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            self.bookCard.alpha = 1.0
+        }
     }
 }

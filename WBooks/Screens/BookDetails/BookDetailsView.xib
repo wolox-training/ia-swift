@@ -110,6 +110,10 @@
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="30" bottom="22" right="30"/>
                 </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-im-JY5">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -119,6 +123,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="activityIndicator" destination="gAG-im-JY5" id="4Ad-Ad-OLE"/>
                 <outlet property="addToWishButton" destination="KbC-cm-urq" id="3nI-0P-DHg"/>
                 <outlet property="bookAuthor" destination="bf9-ZQ-uGT" id="6ja-W0-0fD"/>
                 <outlet property="bookCard" destination="xrs-Bb-aG2" id="GB6-YR-kjN"/>

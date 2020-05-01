@@ -16,14 +16,6 @@ class BookDetailsViewModel {
         self.bookModel = bookModel
     }
     
-    var updateLoadingStatus = {}
-    
-    var isLoading: Bool = false {
-        didSet {
-            self.updateLoadingStatus()
-        }
-    }
-    
     func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         let rentSuccess = {
             onSuccess()

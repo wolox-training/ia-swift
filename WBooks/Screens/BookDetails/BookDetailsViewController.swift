@@ -58,6 +58,7 @@ class BookDetailsViewController: BaseViewController {
             let alert = UIAlertController().createErrorAlert(message: "RENT_UNAVAILABLE".localized())
             self.present(alert, animated: true)
         } else {
+            _view.updateLoading(isLoading: true)
             _bookDetailsViewModel.rentBook(onSuccess: rentBookSuccess, onError: rentBookError)
         }
     }
@@ -65,11 +66,14 @@ class BookDetailsViewController: BaseViewController {
 
 extension BookDetailsViewController {
     func rentBookSuccess() {
-        print("")
+        _view.bookStatus.text = "Unavailable"
+        _view.updateStyles(newStatus: "Unavailable")
+        _view.updateLoading(isLoading: false)
     }
     
     func rentBookError() {
         let alert = UIAlertController().createErrorAlert(message: "RENT_ERROR".localized())
         self.present(alert, animated: true)
+        _view.updateLoading(isLoading: false)
     }
 }

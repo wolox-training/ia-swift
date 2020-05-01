@@ -13,6 +13,7 @@ import Alamofire
 internal class BookRepository {
     
     let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
+    let header: HTTPHeaders = ["Content-Type": "application/json"]
     
     public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/books"
@@ -37,24 +38,17 @@ internal class BookRepository {
     public func rendBook(bookId: Int, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/users/5/rents"
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let params: [String: Any] = [
             "userID": 5,
             "bookID": bookId,
             "from": dateFormatter.string(from: Date()),
             "to": dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date())
         ]
-        request(endpoint, method: .post, parameters: params).responseJSON { response in
+        request(endpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header ).responseJSON { response in
             switch response.result {
             case .success:
-//                guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
-//                    onError(BookError.decodeError)
-//                    return
-//                }
-//                guard let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
-//                    onError(BookError.decodeError)
-//                    return
-//                }
+                print("sucesssss")
                 onSuccess()
             case .failure(let error):
                 onError(error)

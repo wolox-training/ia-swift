@@ -48,9 +48,8 @@ class LibraryViewController: BaseViewController {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
-
-            
-        }
+    }
+    
     func fetchDataSuccess() {
         _view.booksTable.reloadData()
         updateLoadingDisplay(loading: false)

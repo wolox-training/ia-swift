@@ -28,4 +28,5 @@
 
 "RENT" = "ALQUILAR";
 "TO_WISH_LIST" = "AGREGAR A DESEADOS";
-
+"RENT_UNAVAILABLE" = "Este libro no está disponible por el momento. Por favor, vuelve a intentar mas tarde.";
+"RENT_ERROR" = "Hubo un error. Vuelve  aintentarlo mas tarde.";

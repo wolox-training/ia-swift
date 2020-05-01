@@ -28,3 +28,5 @@
 
 "RENT" = "RENT";
 "TO_WISH_LIST" = "ADD TO WISHLIST";
+"RENT_UNAVAILABLE" = "This book is unavailable right now. Please retry later.";
+"RENT_ERROR" = "An error has ocurred. Please retry later.";

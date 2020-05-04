@@ -40,6 +40,7 @@ class BookDetailsView: UIView, NibLoadable {
             
         }
     }
+    @IBOutlet weak var commentsTable: UITableView!
     
     // MARK: - update status label
     func updateStyles(newStatus: String) {

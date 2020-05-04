@@ -31,7 +31,7 @@ class BookRepository {
             }
     }
     
-    public func rendBook(bookId: Int, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+    public func rentBook(bookId: Int, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/users/5/rents"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -51,8 +51,28 @@ class BookRepository {
             }
         }
     }
+    
+    public func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
+        let endpoint = "\(baseUrl)/books/\(bookId)/comments"
+        request(endpoint, method: .get).responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    guard let JSONcomments = try? JSONSerialization.data(withJSONObject: value, options: []), let comments = try? JSONDecoder().decode([Comment].self, from: JSONcomments) else {
+                        onError(CommentError.decodeError)
+                        return
+                    }
+                    onSuccess(comments)
+                case .failure(let error):
+                    onError(error)
+                }
+            }
+    }
 }
 
 enum BookError: Error {
+    case decodeError
+}
+
+enum CommentError: Error {
     case decodeError
 }

@@ -106,20 +106,33 @@
                         <constraint firstAttribute="trailing" secondItem="q62-FE-5Mr" secondAttribute="trailing" constant="30" id="Vdp-Su-MUY"/>
                         <constraint firstItem="q62-FE-5Mr" firstAttribute="leading" secondItem="xrs-Bb-aG2" secondAttribute="leading" constant="30" id="bmW-tM-V2I"/>
                         <constraint firstItem="4iD-xA-hUK" firstAttribute="leading" secondItem="xrs-Bb-aG2" secondAttribute="leading" constant="30" id="cYQ-33-57S"/>
+                        <constraint firstAttribute="height" constant="305" id="pnX-sd-rU8"/>
                         <constraint firstAttribute="trailing" secondItem="4iD-xA-hUK" secondAttribute="trailing" constant="30" id="rex-Cm-ULh"/>
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="30" bottom="22" right="30"/>
                 </stackView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-im-JY5">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thq-5z-ttQ" userLabel="Comments Table">
+                    <rect key="frame" x="20" y="399" width="374" height="463"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="463" id="vyy-lD-POZ"/>
+                    </constraints>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-im-JY5">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="leading" secondItem="xrs-Bb-aG2" secondAttribute="leading" id="3Ef-S6-s79"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="top" secondItem="xrs-Bb-aG2" secondAttribute="bottom" constant="10" id="Cvs-Ru-ZIR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xrs-Bb-aG2" secondAttribute="trailing" constant="20" id="Dyy-GF-B9H"/>
                 <constraint firstItem="xrs-Bb-aG2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Gru-6H-pzV"/>
                 <constraint firstItem="xrs-Bb-aG2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KJk-Gi-eLx"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="centerX" secondItem="gAG-im-JY5" secondAttribute="centerX" id="XSW-qM-tYH"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="trailing" secondItem="xrs-Bb-aG2" secondAttribute="trailing" id="aBj-hk-Tsn"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jEi-50-kOv"/>
+                <constraint firstItem="gAG-im-JY5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ofC-36-yRa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -132,6 +145,7 @@
                 <outlet property="bookStatus" destination="XX1-gh-Og3" id="sLT-y4-uQM"/>
                 <outlet property="bookTitle" destination="kxe-7F-JuY" id="OSC-iU-0uY"/>
                 <outlet property="bookYear" destination="sh2-Fl-s9s" id="wB9-IN-W79"/>
+                <outlet property="commentsTable" destination="thq-5z-ttQ" id="Ug7-UA-pwf"/>
                 <outlet property="rentButton" destination="CQt-fS-WhF" id="UuF-j7-RfU"/>
             </connections>
             <point key="canvasLocation" x="34.782608695652179" y="-207.58928571428569"/>

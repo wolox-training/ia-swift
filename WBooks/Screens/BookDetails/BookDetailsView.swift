@@ -26,14 +26,14 @@ class BookDetailsView: UIView, NibLoadable {
     @IBOutlet weak var rentButton: UIButton! {
         didSet {
             rentButton.applyGradient(colors: UIColor.blueGradient)
-            rentButton.setTitle("RENT".localized(), for: UIControlState.normal)
+            rentButton.setTitle("RENT".localized(), for: UIControl.State.normal)
             rentButton.layer.borderWidth = 0
             rentButton.layer.cornerRadius = 20
         }
     }
     @IBOutlet weak var addToWishButton: UIButton! {
         didSet {
-            addToWishButton.setTitle("TO_WISH_LIST".localized(), for: UIControlState.normal)
+            addToWishButton.setTitle("TO_WISH_LIST".localized(), for: UIControl.State.normal)
             addToWishButton.layer.borderWidth = 2.0
             addToWishButton.layer.cornerRadius = 20
             addToWishButton.layer.borderColor = UIColor.strongBlue?.cgColor

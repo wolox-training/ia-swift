@@ -38,7 +38,7 @@
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment Section" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhX-CP-TFJ" userLabel="Comment">
                                     <rect key="frame" x="0.0" y="23.5" width="315" height="174.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>

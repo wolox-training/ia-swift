@@ -10,7 +10,11 @@ import WolmoCore
 
 class CommentCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userComment: UILabel!
+    @IBOutlet weak var userComment: UILabel! {
+        didSet {
+            userComment.contentMode = .scaleAspectFill
+        }
+    }
     @IBOutlet weak var userImage: UIImageView! {
         didSet {
             userImage.layer.cornerRadius = 5

@@ -28,34 +28,34 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-Dy-s6J">
-                                    <rect key="frame" x="101" y="7" width="213" height="140"/>
+                                    <rect key="frame" x="101" y="21.5" width="213" height="111.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don know js book about " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-7F-JuY">
-                                            <rect key="frame" x="0.0" y="0.0" width="213" height="57.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="213" height="29"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX1-gh-Og3">
-                                            <rect key="frame" x="0.0" y="59.5" width="46.5" height="18"/>
+                                            <rect key="frame" x="0.0" y="31" width="46.5" height="18"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf9-ZQ-uGT">
-                                            <rect key="frame" x="0.0" y="79.5" width="49.5" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="51" width="49.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                             <color key="textColor" red="0.37804624199999998" green="0.3993807056" blue="0.40710263320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sh2-Fl-s9s">
-                                            <rect key="frame" x="0.0" y="102" width="29.5" height="18"/>
+                                            <rect key="frame" x="0.0" y="73.5" width="29.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" red="0.37804624199999998" green="0.3993807056" blue="0.40710263320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gener" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytv-qt-hGm">
-                                            <rect key="frame" x="0.0" y="122" width="39.5" height="18"/>
+                                            <rect key="frame" x="0.0" y="93.5" width="39.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" red="0.37804624199999998" green="0.3993807056" blue="0.40710263320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -111,12 +111,9 @@
                     </constraints>
                     <edgeInsets key="layoutMargins" top="8" left="30" bottom="22" right="30"/>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thq-5z-ttQ" userLabel="Comments Table">
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thq-5z-ttQ" userLabel="Comments Table">
                     <rect key="frame" x="20" y="399" width="374" height="463"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="463" id="vyy-lD-POZ"/>
-                    </constraints>
                 </tableView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-im-JY5">
                     <rect key="frame" x="197" y="438" width="20" height="20"/>
@@ -131,7 +128,7 @@
                 <constraint firstItem="xrs-Bb-aG2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KJk-Gi-eLx"/>
                 <constraint firstItem="thq-5z-ttQ" firstAttribute="centerX" secondItem="gAG-im-JY5" secondAttribute="centerX" id="XSW-qM-tYH"/>
                 <constraint firstItem="thq-5z-ttQ" firstAttribute="trailing" secondItem="xrs-Bb-aG2" secondAttribute="trailing" id="aBj-hk-Tsn"/>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jEi-50-kOv"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kpp-ji-Ued"/>
                 <constraint firstItem="gAG-im-JY5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ofC-36-yRa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

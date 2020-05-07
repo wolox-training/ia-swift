@@ -60,8 +60,6 @@ class BookDetailsViewController: BaseViewController {
         _view.commentsTable.dataSource = self
         _view.commentsTable.register(cell: CommentCell.self)
         _view.commentsTable.separatorStyle = .none
-        _view.commentsTable.rowHeight = UITableViewAutomaticDimension
-        _view.commentsTable.estimatedRowHeight = 100
     }
     
     @objc private func rentButtonTapped() {
@@ -99,12 +97,12 @@ extension BookDetailsViewController {
     }
 }
 
-//// : - UITable extensions
-//extension BookDetailsViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
-//}
+// MARK: - UITable extensions
+extension BookDetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
 
 extension BookDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

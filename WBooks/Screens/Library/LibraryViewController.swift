@@ -57,8 +57,10 @@ class LibraryViewController: BaseViewController {
     }
     
     func fetchDataError() {
-        self._view.booksTable.reloadData()
         updateLoadingDisplay(loading: false)
+        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE", message: "REQUEST_ERROR_BODY", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func updateLoadingDisplay(loading: Bool) {

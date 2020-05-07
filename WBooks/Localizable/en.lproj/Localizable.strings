@@ -22,3 +22,7 @@
 "ADD_NEW_TAB_TITLE" = "Add New";
 "RENTALS_TAB_TITLE" = "Rentals";
 "SETTINGS_TAB_TITLE" = "Settings";
+
+// MARK: Alert Messages
+"REQUEST_ERROR_TITLE" = "Loading error";
+"REQUEST_ERROR_BODY" = "An error was ocurred when trying to get the information. Please try egain later.";

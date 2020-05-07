@@ -26,7 +26,6 @@ class BookDetailsView: UIView, NibLoadable {
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var rentButton: UIButton! {
         didSet {
-            rentButton.applyGradient(colors: UIColor.blueGradient)
             rentButton.setTitle("RENT".localized(), for: UIControl.State.normal)
             rentButton.layer.borderWidth = 0
             rentButton.layer.cornerRadius = 20
@@ -45,7 +44,15 @@ class BookDetailsView: UIView, NibLoadable {
     
     // MARK: - update status label
     func updateStyles(newStatus: String) {
-        bookStatus.textColor = newStatus == "Unavailable" ? UIColor.creamRed : UIColor.creamGreen
+        if newStatus == "Unavailable" {
+            bookStatus.textColor = UIColor.creamRed
+            rentButton.applyGradient(colors: UIColor.grayGradient)
+            rentButton.isUserInteractionEnabled = false
+        } else {
+            bookStatus.textColor = UIColor.creamGreen
+            rentButton.applyGradient(colors: UIColor.blueGradient)
+            rentButton.isUserInteractionEnabled = true
+        }
     }
     
     func updateRentLoading(isLoading: Bool) {

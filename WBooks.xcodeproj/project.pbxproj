@@ -11,6 +11,8 @@
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
 		5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */; };
+		5E0C9F5F2464840100C96E4C /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F5E2464840100C96E4C /* Rent.swift */; };
+		5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F602464887500C96E4C /* UserRepository.swift */; };
 		5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319F223D6267300C2CC49 /* LibraryView.xib */; };
 		5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F423D626A900C2CC49 /* LibraryView.swift */; };
 		5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */; };
@@ -104,6 +106,8 @@
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		5E0C9F5E2464840100C96E4C /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
+		5E0C9F602464887500C96E4C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5E1319F223D6267300C2CC49 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		5E1319F423D626A900C2CC49 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				5E435DFD2437630B006F3B98 /* BookRepository.swift */,
+				5E0C9F602464887500C96E4C /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			children = (
 				5EFF0EC024368B4A0044F96E /* Book.swift */,
 				5E242171245F9E6D0091223D /* Comment.swift */,
+				5E0C9F5E2464840100C96E4C /* Rent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */,
 				5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
+				5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
@@ -650,6 +657,7 @@
 				5EFF0EC124368B4A0044F96E /* Book.swift in Sources */,
 				5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */,
 				5EFF0EB8243615B60044F96E /* LibraryViewModel.swift in Sources */,
+				5E0C9F5F2464840100C96E4C /* Rent.swift in Sources */,
 				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

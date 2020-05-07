@@ -10,6 +10,7 @@ import Foundation
 
 class BookDetailsViewModel {
     let bookRepository = BookRepository()
+    let userRepository = UserRepository()
     let bookModel: Book
     var commentsList: [Comment]
     
@@ -36,7 +37,10 @@ extension BookDetailsViewModel {
             onError()
             print(error)
         }
-        bookRepository.rentBook(bookId: self.bookModel.id, onSuccess: rentSuccess, onError: rentError)
+        let from = Date()
+        let to = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
+        let rentModel = Rent(bookId: bookModel.id, from: from, to: to)
+        userRepository.rentBook(rentModel: rentModel, onSuccess: rentSuccess, onError: rentError)
     }
     
     func getBookComments(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {

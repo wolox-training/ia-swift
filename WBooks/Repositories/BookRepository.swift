@@ -31,27 +31,6 @@ class BookRepository {
             }
     }
     
-    public func rentBook(bookId: Int, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
-        let endpoint = "\(baseUrl)/users/5/rents"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let params: [String: Any] = [
-            "userID": 5,
-            "bookID": bookId,
-            "from": dateFormatter.string(from: Date()),
-            "to": dateFormatter.string(from: Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date())
-        ]
-        request(endpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header ).responseJSON { response in
-            switch response.result {
-            case .success:
-                print("sucesssss")
-                onSuccess()
-            case .failure(let error):
-                onError(error)
-            }
-        }
-    }
-    
     public func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/books/\(bookId)/comments"
         request(endpoint, method: .get).responseJSON { response in
@@ -70,9 +49,5 @@ class BookRepository {
 }
 
 enum BookError: Error {
-    case decodeError
-}
-
-enum CommentError: Error {
     case decodeError
 }

@@ -18,6 +18,7 @@ enum CommentKey: String, CodingKey {
 struct Comment: Codable {
     
     // MARK: - Properties
+    
     let id: Int
     let username: String
     let image: String?

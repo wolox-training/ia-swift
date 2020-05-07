@@ -37,7 +37,6 @@ class BookDetailsView: UIView, NibLoadable {
             addToWishButton.layer.borderWidth = 2.0
             addToWishButton.layer.cornerRadius = 20
             addToWishButton.layer.borderColor = UIColor.strongBlue?.cgColor
-            
         }
     }
     @IBOutlet weak var commentsTable: UITableView! {
@@ -49,9 +48,24 @@ class BookDetailsView: UIView, NibLoadable {
         }
     }
     
-    // MARK: - update status label
-    func updateStyles(newStatus: String) {
-        if newStatus == "Unavailable" {
+    // MARK: - functions to update styles
+    
+    func setupBookDetails(bookModel: Book) {
+        bookTitle.text = bookModel.title
+        bookGen.text = bookModel.genre
+        bookYear.text = bookModel.year
+        bookAuthor.text = bookModel.author
+        bookStatus.text = bookModel.status
+        updateStatusStyle(newStatus: BookStatus(rawValue: bookModel.status) ?? BookStatus.unavailable)
+        bookImage.image = UIImage.defaultBook
+        if let image = bookModel.image {
+            bookImage.loadUrl(from: image)
+        }
+    }
+    
+    func updateStatusStyle(newStatus: BookStatus) {
+        bookStatus.text = newStatus.rawValue
+        if newStatus == BookStatus.unavailable {
             bookStatus.textColor = UIColor.creamRed
             rentButton.applyGradient(colors: UIColor.grayGradient)
             rentButton.isUserInteractionEnabled = false
@@ -83,4 +97,9 @@ class BookDetailsView: UIView, NibLoadable {
             booksLoadingIndicator.stopAnimating()
         }
     }
+}
+
+enum BookStatus: String {
+    case available = "Available"
+    case unavailable = "Unavailable"
 }

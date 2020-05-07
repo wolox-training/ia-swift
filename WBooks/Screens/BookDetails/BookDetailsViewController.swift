@@ -6,7 +6,6 @@
 //  Copyright © 2020 Wolox. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class BookDetailsViewController: BaseViewController {
@@ -32,17 +31,7 @@ class BookDetailsViewController: BaseViewController {
     
     override public func loadView() {
         view = _view
-        _view.bookTitle.text = _bookDetailsViewModel.bookModel.title
-        _view.bookGen.text = _bookDetailsViewModel.bookModel.genre
-        _view.bookYear.text = _bookDetailsViewModel.bookModel.year
-        _view.bookAuthor.text = _bookDetailsViewModel.bookModel.author
-        _view.bookStatus.text = _bookDetailsViewModel.bookModel.status
-        _view.updateStyles(newStatus: _bookDetailsViewModel.bookModel.status)
-        if _bookDetailsViewModel.bookModel.image != nil {
-            _view.bookImage.loadUrl(from: _bookDetailsViewModel.bookModel.image ?? "")
-        } else {
-            _view.bookImage.image = UIImage.defaultBook
-        }
+        _view.setupBookDetails(bookModel: _bookDetailsViewModel.bookModel)
     }
     
     override func viewDidLoad() {
@@ -64,8 +53,8 @@ class BookDetailsViewController: BaseViewController {
     }
     
     @objc private func rentButtonTapped() {
-        if _bookDetailsViewModel.bookModel.status == "Unavailable" {
-            let alert = UIAlertController().createErrorAlert(message: "RENT_UNAVAILABLE".localized())
+        if _bookDetailsViewModel.bookModel.status == BookStatus.unavailable.rawValue {
+            let alert = UIAlertController.createErrorAlert(message: "RENT_UNAVAILABLE".localized())
             self.present(alert, animated: true)
         } else {
             _view.updateRentLoading(isLoading: true)
@@ -77,20 +66,19 @@ class BookDetailsViewController: BaseViewController {
 // MARK: - Extension for request callbacks
 extension BookDetailsViewController {
     func rentBookSuccess() {
-        _view.bookStatus.text = "Unavailable"
-        _view.updateStyles(newStatus: "Unavailable")
+        _view.updateStatusStyle(newStatus: BookStatus.unavailable)
         _view.updateRentLoading(isLoading: false)
     }
     
     func rentBookError() {
-        let alert = UIAlertController().createErrorAlert(message: "RENT_ERROR".localized())
+        let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
         self.present(alert, animated: true)
         _view.updateRentLoading(isLoading: false)
     }
     
     func getCommentsSuccess() {
         _view.updateCommentsLoading(isLoading: false)
-        if _bookDetailsViewModel.numberOfComments == 0 {
+        if _bookDetailsViewModel.isEmptyComments {
             _view.commentsTable.setEmptyMessage("EMPTY_BOOK_COMMENTS".localized())
         } else {
             _view.commentsTable.restore()
@@ -100,7 +88,7 @@ extension BookDetailsViewController {
     
     func getCommentsError() {
         _view.updateCommentsLoading(isLoading: false)
-        let alert = UIAlertController().createErrorAlert(message: "RENT_ERROR".localized())
+        let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
         self.present(alert, animated: true)
     }
 }

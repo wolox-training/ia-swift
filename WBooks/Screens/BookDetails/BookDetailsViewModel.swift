@@ -23,6 +23,10 @@ class BookDetailsViewModel {
         return commentsList.count
     }
     
+    var isEmptyComments: Bool {
+        return commentsList.isEmpty
+    }
+    
     func getCommentCellViewModel(at indexPath: IndexPath) -> CommentCellViewModel {
         CommentCellViewModel(commentModel: commentsList[indexPath.row])
     }

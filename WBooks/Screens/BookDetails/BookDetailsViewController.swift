@@ -56,7 +56,7 @@ class BookDetailsViewController: BaseViewController {
     }
     
     func setupTableView() {
-        _view.commentsTable.delegate = self as? UITableViewDelegate
+        _view.commentsTable.delegate = self
         _view.commentsTable.dataSource = self
         _view.commentsTable.register(cell: CommentCell.self)
         _view.commentsTable.separatorStyle = .none

@@ -30,3 +30,8 @@
 "TO_WISH_LIST" = "AGREGAR A DESEADOS";
 "RENT_UNAVAILABLE" = "Este libro no está disponible por el momento. Por favor, vuelve a intentar mas tarde.";
 "RENT_ERROR" = "Hubo un error. Vuelve  aintentarlo mas tarde.";
+
+// MARK: Alert Messages
+
+"REQUEST_ERROR_TITLE" = "Error al cargar";
+"REQUEST_ERROR_BODY" = "Ha ocurrido un error tratando de obtener la información. Por favor vuelve a intentarlo mas tarde.";

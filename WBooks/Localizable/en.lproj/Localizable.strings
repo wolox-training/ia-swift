@@ -24,9 +24,15 @@
 "RENTALS_TAB_TITLE" = "Rentals";
 "SETTINGS_TAB_TITLE" = "Settings";
 
+
 // MARK: Book Details View
 
 "RENT" = "RENT";
 "TO_WISH_LIST" = "ADD TO WISHLIST";
 "RENT_UNAVAILABLE" = "This book is unavailable right now. Please retry later.";
 "RENT_ERROR" = "An error has ocurred. Please retry later.";
+
+// MARK: Alert Messages
+
+"REQUEST_ERROR_TITLE" = "Loading error";
+"REQUEST_ERROR_BODY" = "An error was ocurred when trying to get the information. Please try egain later.";

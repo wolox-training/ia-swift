@@ -16,12 +16,15 @@ enum CommentKey: String, CodingKey {
 }
 
 struct Comment: Codable {
+    
     // MARK: - Properties
     let id: Int
     let username: String
     let image: String?
     let content: String
+    
     // MARK: - Codable
+    
     // Coding Keys
     enum CodingKeys: String, CodingKey {
         case user
@@ -30,6 +33,7 @@ struct Comment: Codable {
         case image
         case content
     }
+    
     // Decoding
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -39,6 +43,7 @@ struct Comment: Codable {
         username = try userContainer.decode(String.self, forKey: .username)
         image = try userContainer.decode(String.self, forKey: .image)
     }
+    
     // Encoding
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)

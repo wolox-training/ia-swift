@@ -17,6 +17,7 @@ class BookDetailsView: UIView, NibLoadable {
         }
     }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var booksLoadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookStatus: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
@@ -47,15 +48,25 @@ class BookDetailsView: UIView, NibLoadable {
         bookStatus.textColor = newStatus == "Unavailable" ? UIColor.creamRed : UIColor.creamGreen
     }
     
-    func updateLoading(isLoading: Bool) {
+    func updateRentLoading(isLoading: Bool) {
         if isLoading {
-            self.activityIndicator.isHidden = false
-            self.activityIndicator.startAnimating()
-            self.bookCard.alpha = 0.5
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            bookCard.alpha = 0.5
         } else {
-            self.self.activityIndicator.isHidden = true
-            self.activityIndicator.stopAnimating()
-            self.bookCard.alpha = 1.0
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+            bookCard.alpha = 1.0
+        }
+    }
+    
+    func updateCommentsLoading(isLoading: Bool) {
+        if isLoading {
+            booksLoadingIndicator.isHidden = false
+            booksLoadingIndicator.startAnimating()
+        } else {
+            booksLoadingIndicator.isHidden = true
+            booksLoadingIndicator.stopAnimating()
         }
     }
 }

@@ -57,7 +57,7 @@ class LibraryViewController: BaseViewController {
     
     func fetchDataError() {
         updateLoadingDisplay(loading: false)
-        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE", message: "REQUEST_ERROR_BODY", preferredStyle: .alert)
+        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE".localized(), message: "REQUEST_ERROR_BODY".localized(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }

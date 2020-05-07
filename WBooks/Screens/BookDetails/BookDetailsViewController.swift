@@ -48,6 +48,7 @@ class BookDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        _view.updateCommentsLoading(isLoading: true)
         _bookDetailsViewModel.getBookComments(onSuccess: getCommentsSuccess, onError: getCommentsError)
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "BOOK_DETAILS_HEADER_TITLE".localized())
@@ -67,7 +68,7 @@ class BookDetailsViewController: BaseViewController {
             let alert = UIAlertController().createErrorAlert(message: "RENT_UNAVAILABLE".localized())
             self.present(alert, animated: true)
         } else {
-            _view.updateLoading(isLoading: true)
+            _view.updateRentLoading(isLoading: true)
             _bookDetailsViewModel.rentBook(onSuccess: rentBookSuccess, onError: rentBookError)
         }
     }
@@ -78,20 +79,27 @@ extension BookDetailsViewController {
     func rentBookSuccess() {
         _view.bookStatus.text = "Unavailable"
         _view.updateStyles(newStatus: "Unavailable")
-        _view.updateLoading(isLoading: false)
+        _view.updateRentLoading(isLoading: false)
     }
     
     func rentBookError() {
         let alert = UIAlertController().createErrorAlert(message: "RENT_ERROR".localized())
         self.present(alert, animated: true)
-        _view.updateLoading(isLoading: false)
+        _view.updateRentLoading(isLoading: false)
     }
     
     func getCommentsSuccess() {
+        _view.updateCommentsLoading(isLoading: false)
+        if _bookDetailsViewModel.numberOfComments == 0 {
+            _view.commentsTable.setEmptyMessage("EMPTY_BOOK_COMMENTS".localized())
+        } else {
+            _view.commentsTable.restore()
+        }
         _view.commentsTable.reloadData()
     }
     
     func getCommentsError() {
+        _view.updateCommentsLoading(isLoading: false)
         let alert = UIAlertController().createErrorAlert(message: "RENT_ERROR".localized())
         self.present(alert, animated: true)
     }

@@ -10,6 +10,7 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */; };
 		5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319F223D6267300C2CC49 /* LibraryView.xib */; };
 		5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F423D626A900C2CC49 /* LibraryView.swift */; };
 		5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */; };
@@ -102,6 +103,7 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		5E1319F223D6267300C2CC49 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		5E1319F423D626A900C2CC49 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				5E242164245B66B10091223D /* UIButtonExtension.swift */,
 				5E242166245B6FEB0091223D /* UIStackViewExtension.swift */,
 				5E242168245BA5E30091223D /* UIAlertControllerExtension.swift */,
+				5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
 				5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
+				5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */,
 				5E435E09243A59F5006F3B98 /* BookDetailsViewModel.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				5EFF0EC124368B4A0044F96E /* Book.swift in Sources */,

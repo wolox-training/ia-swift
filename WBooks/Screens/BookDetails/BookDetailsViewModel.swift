@@ -9,13 +9,13 @@
 import Foundation
 
 class BookDetailsViewModel {
-    let bookRepository = BookRepository()
-    let userRepository = UserRepository()
-    let bookModel: Book
+    private let _bookRepository = BookRepository()
+    private let _userRepository = UserRepository()
+    private var _bookModel: Book
     var commentsList: [Comment]
     
     init(bookModel: Book) {
-        self.bookModel = bookModel
+        self._bookModel = bookModel
         self.commentsList = []
     }
     
@@ -27,6 +27,30 @@ class BookDetailsViewModel {
         return commentsList.isEmpty
     }
     
+    var status: BookStatus {
+        BookStatus(rawValue: _bookModel.status) ?? BookStatus.unavailable
+    }
+    
+    var title: String {
+        _bookModel.title
+    }
+    
+    var author: String {
+        _bookModel.author
+    }
+    
+    var genre: String {
+        _bookModel.genre
+    }
+    
+    var year: String {
+        _bookModel.year
+    }
+    
+    var image: String? {
+        return _bookModel.image != nil && _bookModel.image!.isNotEmpty ? _bookModel.image : nil
+    }
+    
     func getCommentCellViewModel(at indexPath: IndexPath) -> CommentCellViewModel {
         CommentCellViewModel(commentModel: commentsList[indexPath.row])
     }
@@ -35,6 +59,7 @@ class BookDetailsViewModel {
 extension BookDetailsViewModel {
     func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
         let rentSuccess = {
+            self._bookModel.status = BookStatus.unavailable.rawValue
             onSuccess()
         }
         let rentError: (Error) -> Void = { error in
@@ -43,8 +68,8 @@ extension BookDetailsViewModel {
         }
         let from = Date()
         let to = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
-        let rentModel = Rent(bookId: bookModel.id, from: from, to: to)
-        userRepository.rentBook(rentModel: rentModel, onSuccess: rentSuccess, onError: rentError)
+        let rentModel = Rent(bookId: _bookModel.id, from: from, to: to)
+        _userRepository.rentBook(rentModel: rentModel, onSuccess: rentSuccess, onError: rentError)
     }
     
     func getBookComments(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
@@ -56,6 +81,6 @@ extension BookDetailsViewModel {
             onError()
             print(error)
         }
-        bookRepository.fetchComments(bookId: self.bookModel.id, onSuccess: commentsSuccess, onError: commentsError)
+        _bookRepository.fetchComments(bookId: self._bookModel.id, onSuccess: commentsSuccess, onError: commentsError)
     }
 }

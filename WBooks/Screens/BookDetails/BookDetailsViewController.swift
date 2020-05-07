@@ -31,7 +31,12 @@ class BookDetailsViewController: BaseViewController {
     
     override public func loadView() {
         view = _view
-        _view.setupBookDetails(bookModel: _bookDetailsViewModel.bookModel)
+        _view.setupBookDetails(title: _bookDetailsViewModel.title,
+                               genre: _bookDetailsViewModel.genre,
+                               year: _bookDetailsViewModel.year,
+                               author: _bookDetailsViewModel.author,
+                               status: _bookDetailsViewModel.status,
+                               image: _bookDetailsViewModel.image)
     }
     
     override func viewDidLoad() {
@@ -53,7 +58,7 @@ class BookDetailsViewController: BaseViewController {
     }
     
     @objc private func rentButtonTapped() {
-        if _bookDetailsViewModel.bookModel.status == BookStatus.unavailable.rawValue {
+        if _bookDetailsViewModel.status == BookStatus.unavailable {
             let alert = UIAlertController.createErrorAlert(message: "RENT_UNAVAILABLE".localized())
             self.present(alert, animated: true)
         } else {
@@ -66,7 +71,7 @@ class BookDetailsViewController: BaseViewController {
 // MARK: - Extension for request callbacks
 extension BookDetailsViewController {
     func rentBookSuccess() {
-        _view.updateStatusStyle(newStatus: BookStatus.unavailable)
+        _view.updateStatusStyle(newStatus: _bookDetailsViewModel.status)
         _view.updateRentLoading(isLoading: false)
     }
     

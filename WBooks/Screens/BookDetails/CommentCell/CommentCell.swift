@@ -29,9 +29,9 @@ class CommentCell: UITableViewCell, NibLoadable {
         userName.text = cellVM.username
         userComment.text = cellVM.content
         if let image = cellVM.image {
-            userImage.loadUrl(from: image)
+            userImage.loadUrl(from: image, defaultImage: .defaultUser)
         } else {
-            userImage.image = UIImage.defaultBook
+            userImage.image = .defaultUser
         }
     }
 }

@@ -50,16 +50,18 @@ class BookDetailsView: UIView, NibLoadable {
     
     // MARK: - functions to update styles
     
-    func setupBookDetails(bookModel: Book) {
-        bookTitle.text = bookModel.title
-        bookGen.text = bookModel.genre
-        bookYear.text = bookModel.year
-        bookAuthor.text = bookModel.author
-        bookStatus.text = bookModel.status
-        updateStatusStyle(newStatus: BookStatus(rawValue: bookModel.status) ?? BookStatus.unavailable)
-        bookImage.image = UIImage.defaultBook
-        if let image = bookModel.image {
-            bookImage.loadUrl(from: image)
+    func setupBookDetails(title: String, genre: String, year: String, author: String, status: BookStatus, image: String?) {
+        bookTitle.text = title
+        bookGen.text = genre
+        bookYear.text = year
+        bookAuthor.text = author
+        bookStatus.text = status.rawValue
+        updateStatusStyle(newStatus: status)
+        
+        if let image = image {
+            bookImage.loadUrl(from: image, defaultImage: UIImage.defaultBook)
+        } else {
+            bookImage.image = .defaultBook
         }
     }
     

@@ -16,7 +16,7 @@ struct Book: Codable {
     let genre: String
     let year: String
     let image: String?
-    let status: String
+    var status: String
 
 }
 

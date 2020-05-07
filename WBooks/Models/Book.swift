@@ -8,10 +8,25 @@
 
 import Foundation
 
-struct Book {
+struct Book: Codable {
     
+    let id: Int
     let title: String
     let author: String
+    let genre: String
+    let year: String
     let image: String?
-    
+    let status: String
+
+}
+
+// Book Json keys enum
+enum BookKey: String, CodingKey {
+    case id
+    case title
+    case author
+    case genre
+    case year
+    case image
+    case status
 }

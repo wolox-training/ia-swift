@@ -24,4 +24,5 @@ extension UIImage {
     static let settingsActiveIcon: UIImage = UIImage(named: "ic_settings_active") ?? UIImage()
     static let wishlistIcon: UIImage = UIImage(named: "ic_wishlist") ?? UIImage()
     static let wishlistActiveIcon: UIImage = UIImage(named: "ic_wishlist_active") ?? UIImage()
+    static let defaultBook: UIImage = UIImage(named: "default_book") ?? UIImage()
 }

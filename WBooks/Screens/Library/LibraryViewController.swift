@@ -12,7 +12,6 @@ import WolmoCore
 class LibraryViewController: BaseViewController {
     private let _libraryViewModel: LibraryViewModel
     private let _view: LibraryView = LibraryView.loadFromNib()!
-    
     // MARK: - UIViewController
 
     required public init?(coder aDecoder: NSCoder) {
@@ -41,12 +40,41 @@ class LibraryViewController: BaseViewController {
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
         setupTableView()
+        updateLoadingDisplay(loading: true)
+        _libraryViewModel.getBooks(onSuccess: fetchDataSuccess, onError: fetchDataError)
     }
     
     func setupTableView() {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
+
+            
+        }
+    func fetchDataSuccess() {
+        _view.booksTable.reloadData()
+        updateLoadingDisplay(loading: false)
+    }
+    
+    func fetchDataError() {
+        updateLoadingDisplay(loading: false)
+        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE", message: "REQUEST_ERROR_BODY", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func updateLoadingDisplay(loading: Bool) {
+        DispatchQueue.main.async {
+            if loading {
+                self._view.activityIndicator.isHidden = false
+                self._view.activityIndicator.startAnimating()
+                self._view.booksTable.alpha = 0.0
+            } else {
+                self._view.activityIndicator.isHidden = true
+                self._view.activityIndicator.stopAnimating()
+                self._view.booksTable.alpha = 1.0
+            }
+        }
     }
 }
 

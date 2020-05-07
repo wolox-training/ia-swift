@@ -11,4 +11,5 @@ import WolmoCore
 
 class LibraryView: UIView, NibLoadable {
     @IBOutlet weak var booksTable: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 }

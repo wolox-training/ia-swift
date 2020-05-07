@@ -22,3 +22,7 @@
 "ADD_NEW_TAB_TITLE" = "Agregar Nuevo";
 "RENTALS_TAB_TITLE" = "Alquileres";
 "SETTINGS_TAB_TITLE" = "Configuración";
+
+// MARK: Alert Messages
+"REQUEST_ERROR_TITLE" = "Error al cargar";
+"REQUEST_ERROR_BODY" = "Ha ocurrido un error tratando de obtener la información. Por favor vuelve a intentarlo mas tarde.";

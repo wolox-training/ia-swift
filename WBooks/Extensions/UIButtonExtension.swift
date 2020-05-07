@@ -20,11 +20,6 @@ extension UIButton {
         gradientLayer.frame = self.bounds
         gradientLayer.cornerRadius = self.frame.height/2
         gradientLayer.masksToBounds = false
-
         self.layer.insertSublayer(gradientLayer, at: 0)
-        self.contentVerticalAlignment = .center
-        self.setTitleColor(UIColor.white, for: .normal)
-        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17.0)
-        self.titleLabel?.textColor = UIColor.white
     }
 }

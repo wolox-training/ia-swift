@@ -20,10 +20,10 @@ extension UITableView {
         // messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
         messageLabel.sizeToFit()
 
-        self.backgroundView = messageLabel
+        backgroundView = messageLabel
     }
 
     func restore() {
-        self.backgroundView = nil
+        backgroundView = nil
     }
 }

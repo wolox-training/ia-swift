@@ -28,8 +28,8 @@ class CommentCell: UITableViewCell, NibLoadable {
     func setCommentInformation(cellVM: CommentCellViewModel) {
         userName.text = cellVM.username
         userComment.text = cellVM.content
-        if cellVM.image != nil {
-            userImage.loadUrl(from: cellVM.image ?? "")
+        if let image = cellVM.image {
+            userImage.loadUrl(from: image)
         } else {
             userImage.image = UIImage.defaultBook
         }

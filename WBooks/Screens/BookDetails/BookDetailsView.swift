@@ -40,7 +40,14 @@ class BookDetailsView: UIView, NibLoadable {
             
         }
     }
-    @IBOutlet weak var commentsTable: UITableView!
+    @IBOutlet weak var commentsTable: UITableView! {
+        didSet {
+            commentsTable.layer.cornerRadius = 5
+            commentsTable.layer.shadowOffset = CGSize(width: 2, height: 2)
+            commentsTable.layer.shadowColor = UIColor.black.cgColor
+            commentsTable.layer.shadowOpacity = 0.2
+        }
+    }
     
     // MARK: - update status label
     func updateStyles(newStatus: String) {

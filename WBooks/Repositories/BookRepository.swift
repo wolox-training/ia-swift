@@ -15,7 +15,7 @@ class BookRepository {
     let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
     let header: HTTPHeaders = ["Content-Type": "application/json"]
     
-    public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/books"
         request(endpoint, method: .get).responseJSON { response in
                 switch response.result {
@@ -31,7 +31,7 @@ class BookRepository {
             }
     }
     
-    public func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/books/\(bookId)/comments"
         request(endpoint, method: .get).responseJSON { response in
                 switch response.result {

@@ -15,7 +15,7 @@ class UserRepository {
     let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
     let header: HTTPHeaders = ["Content-Type": "application/json"]
     
-    public func rentBook(rentModel: Rent, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+    func rentBook(rentModel: Rent, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let endpoint = "\(baseUrl)/users/5/rents"
         let params: [String: Any] = [
             "userID": 5,

@@ -60,7 +60,7 @@ class BookDetailsViewController: BaseViewController {
     @objc private func rentButtonTapped() {
         if _bookDetailsViewModel.status == BookStatus.unavailable {
             let alert = UIAlertController.createErrorAlert(message: "RENT_UNAVAILABLE".localized())
-            self.present(alert, animated: true)
+            present(alert, animated: true)
         } else {
             _view.updateRentLoading(isLoading: true)
             _bookDetailsViewModel.rentBook(onSuccess: rentBookSuccess, onError: rentBookError)
@@ -77,7 +77,7 @@ extension BookDetailsViewController {
     
     func rentBookError() {
         let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
-        self.present(alert, animated: true)
+        present(alert, animated: true)
         _view.updateRentLoading(isLoading: false)
     }
     
@@ -94,7 +94,7 @@ extension BookDetailsViewController {
     func getCommentsError() {
         _view.updateCommentsLoading(isLoading: false)
         let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 }
 

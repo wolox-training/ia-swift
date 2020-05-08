@@ -12,7 +12,7 @@ class BookDetailsViewModel {
     private let _bookRepository = BookRepository()
     private let _userRepository = UserRepository()
     private var _bookModel: Book
-    var commentsList: [Comment]
+    private var commentsList: [Comment]
     
     init(bookModel: Book) {
         self._bookModel = bookModel
@@ -48,7 +48,8 @@ class BookDetailsViewModel {
     }
     
     var image: String? {
-        return _bookModel.image != nil && _bookModel.image!.isNotEmpty ? _bookModel.image : nil
+        guard let imageName = _bookModel.image, imageName.isNotEmpty else { return nil }
+        return  imageName
     }
     
     func getCommentCellViewModel(at indexPath: IndexPath) -> CommentCellViewModel {

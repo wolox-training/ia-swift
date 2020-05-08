@@ -15,8 +15,8 @@ class BookDetailsViewModel {
     private var commentsList: [Comment]
     
     init(bookModel: Book) {
-        self._bookModel = bookModel
-        self.commentsList = []
+        _bookModel = bookModel
+        commentsList = []
     }
     
     var numberOfComments: Int {

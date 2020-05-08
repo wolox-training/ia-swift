@@ -14,6 +14,7 @@
 // MARK: Main View
 
 "LIBRARY_VIEW_HEADER_TITLE" = "LIBRERÍA";
+"BOOK_DETAILS_HEADER_TITLE" = "DETALLE DE LIBRO";
 
 // MARK: Tab Bar
 
@@ -23,6 +24,15 @@
 "RENTALS_TAB_TITLE" = "Alquileres";
 "SETTINGS_TAB_TITLE" = "Configuración";
 
+// MARK: Book Details View
+
+"RENT" = "ALQUILAR";
+"TO_WISH_LIST" = "AGREGAR A DESEADOS";
+"RENT_UNAVAILABLE" = "Este libro no está disponible por el momento. Por favor, vuelve a intentar más tarde.";
+"RENT_ERROR" = "Hubo un error. Vuelve a intentarlo más tarde.";
+"EMPTY_BOOK_COMMENTS" = "No se encontraron comentarios para este libro";
+
 // MARK: Alert Messages
+
 "REQUEST_ERROR_TITLE" = "Error al cargar";
-"REQUEST_ERROR_BODY" = "Ha ocurrido un error tratando de obtener la información. Por favor vuelve a intentarlo mas tarde.";
+"REQUEST_ERROR_BODY" = "Ha ocurrido un error tratando de obtener la información. Por favor, vuelve a intentarlo más tarde.";

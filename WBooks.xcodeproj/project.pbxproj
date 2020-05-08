@@ -10,13 +10,27 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */; };
+		5E0C9F5F2464840100C96E4C /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F5E2464840100C96E4C /* Rent.swift */; };
+		5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C9F602464887500C96E4C /* UserRepository.swift */; };
 		5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319F223D6267300C2CC49 /* LibraryView.xib */; };
 		5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F423D626A900C2CC49 /* LibraryView.swift */; };
 		5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */; };
 		5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */; };
 		5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */; };
+		5E242165245B66B10091223D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242164245B66B10091223D /* UIButtonExtension.swift */; };
+		5E242167245B6FEB0091223D /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242166245B6FEB0091223D /* UIStackViewExtension.swift */; };
+		5E242169245BA5E30091223D /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242168245BA5E30091223D /* UIAlertControllerExtension.swift */; };
+		5E24216C245BE3F10091223D /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E24216B245BE3F10091223D /* CommentCell.swift */; };
+		5E24216E245BE4080091223D /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E24216D245BE4080091223D /* CommentCellViewModel.swift */; };
+		5E242170245BE43F0091223D /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E24216F245BE43F0091223D /* CommentCell.xib */; };
+		5E242172245F9E6D0091223D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E242171245F9E6D0091223D /* Comment.swift */; };
 		5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435DFD2437630B006F3B98 /* BookRepository.swift */; };
 		5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */; };
+		5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */; };
+		5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E06243A59E4006F3B98 /* BookDetailsView.swift */; };
+		5E435E09243A59F5006F3B98 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */; };
+		5E435E0F243A5EF2006F3B98 /* BookDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */; };
 		5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DD923DBB47500430E41 /* TabBarController.swift */; };
 		5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */; };
 		5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */; };
@@ -24,10 +38,6 @@
 		5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78423DA18B800C8103A /* UIImageExtension.swift */; };
 		5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DD78C23DA2BB800C8103A /* Localizable.strings */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
-		5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105423CF4C35001559C9 /* Debug.xcconfig */; };
-		5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105523CF4C36001559C9 /* Release.xcconfig */; };
-		5EA8105A23CF4C36001559C9 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105623CF4C36001559C9 /* Production.xcconfig */; };
-		5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5EA8105723CF4C36001559C9 /* Alpha.xcconfig */; };
 		5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */; };
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
 		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
@@ -95,13 +105,27 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		5E0C9F5E2464840100C96E4C /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
+		5E0C9F602464887500C96E4C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5E1319F223D6267300C2CC49 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		5E1319F423D626A900C2CC49 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		5E1319F623D6293D00C2CC49 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		5E1319F823D62C4000C2CC49 /* CustomBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCell.swift; sourceTree = "<group>"; };
 		5E1319FA23D62C5D00C2CC49 /* CustomBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomBookCell.xib; sourceTree = "<group>"; };
+		5E242164245B66B10091223D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		5E242166245B6FEB0091223D /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		5E242168245BA5E30091223D /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		5E24216B245BE3F10091223D /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		5E24216D245BE4080091223D /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
+		5E24216F245BE43F0091223D /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		5E242171245F9E6D0091223D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5E435DFD2437630B006F3B98 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
+		5E435E06243A59E4006F3B98 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
+		5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsView.xib; sourceTree = "<group>"; };
 		5E4D8DD923DBB47500430E41 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		5E6DD77F23DA0ACA00C8103A /* WBooksNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksNavigationController.swift; sourceTree = "<group>"; };
@@ -194,12 +218,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E24216A245BE3B90091223D /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				5E24216B245BE3F10091223D /* CommentCell.swift */,
+				5E24216D245BE4080091223D /* CommentCellViewModel.swift */,
+				5E24216F245BE43F0091223D /* CommentCell.xib */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
 		5E435DFC243762EB006F3B98 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				5E435DFD2437630B006F3B98 /* BookRepository.swift */,
+				5E0C9F602464887500C96E4C /* UserRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5E435E032439AEDE006F3B98 /* BookDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5E24216A245BE3B90091223D /* CommentCell */,
+				5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */,
+				5E435E06243A59E4006F3B98 /* BookDetailsView.swift */,
+				5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */,
+				5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */,
+			);
+			path = BookDetails;
 			sourceTree = "<group>";
 		};
 		5E6DD78123DA151500C8103A /* Extensions */ = {
@@ -208,6 +255,10 @@
 				5E6DD78223DA153500C8103A /* UIColorExtension.swift */,
 				5E6DD78423DA18B800C8103A /* UIImageExtension.swift */,
 				5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */,
+				5E242164245B66B10091223D /* UIButtonExtension.swift */,
+				5E242166245B6FEB0091223D /* UIStackViewExtension.swift */,
+				5E242168245BA5E30091223D /* UIAlertControllerExtension.swift */,
+				5E0C9F5C2464550E00C96E4C /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +315,7 @@
 		5EDCAFCC23CE615D005F8E32 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5E435E032439AEDE006F3B98 /* BookDetails */,
 				5EBAA70524318121005D35E7 /* WishList */,
 				5EBAA704243180F1005D35E7 /* Login */,
 				5EBAA7032431809F005D35E7 /* Library */,
@@ -278,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				5EFF0EC024368B4A0044F96E /* Book.swift */,
+				5E242171245F9E6D0091223D /* Comment.swift */,
+				5E0C9F5E2464840100C96E4C /* Rent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -450,22 +504,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Wolox;
 				TargetAttributes = {
 					9D1575001CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Manual;
 					};
 					9D1575141CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1120;
 						TestTargetID = 9D1575001CB1B27500EA395E;
 					};
 					9D15751F1CB1B27500EA395E = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1120;
 						TestTargetID = 9D1575001CB1B27500EA395E;
 					};
 				};
@@ -497,15 +551,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA8105923CF4C36001559C9 /* Release.xcconfig in Resources */,
 				5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */,
-				5EA8105A23CF4C36001559C9 /* Production.xcconfig in Resources */,
+				5E242170245BE43F0091223D /* CommentCell.xib in Resources */,
 				5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */,
+				5E435E0F243A5EF2006F3B98 /* BookDetailsView.xib in Resources */,
 				5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */,
-				5EA8105B23CF4C36001559C9 /* Alpha.xcconfig in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */,
-				5EA8105823CF4C36001559C9 /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,23 +629,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */,
+				5E242167245B6FEB0091223D /* UIStackViewExtension.swift in Sources */,
+				5E24216C245BE3F10091223D /* CommentCell.swift in Sources */,
+				5E242172245F9E6D0091223D /* Comment.swift in Sources */,
+				5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */,
 				5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */,
+				5E242169245BA5E30091223D /* UIAlertControllerExtension.swift in Sources */,
+				5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */,
 				5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */,
 				5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */,
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
+				5E24216E245BE4080091223D /* CommentCellViewModel.swift in Sources */,
+				5E242165245B66B10091223D /* UIButtonExtension.swift in Sources */,
 				5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */,
 				5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
+				5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
 				5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
+				5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */,
+				5E435E09243A59F5006F3B98 /* BookDetailsViewModel.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				5EFF0EC124368B4A0044F96E /* Book.swift in Sources */,
 				5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */,
 				5EFF0EB8243615B60044F96E /* LibraryViewModel.swift in Sources */,
+				5E0C9F5F2464840100C96E4C /* Rent.swift in Sources */,
 				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -655,12 +720,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -710,7 +777,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -727,7 +794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Debug;
@@ -739,7 +806,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WBooks;
 			};
 			name = Debug;
@@ -748,6 +815,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -757,12 +825,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -811,7 +881,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Alpha;
@@ -828,7 +898,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Alpha;
@@ -840,7 +910,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WBooks;
 			};
 			name = Alpha;
@@ -849,6 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -858,12 +929,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -911,7 +984,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -928,7 +1001,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Release;
@@ -940,7 +1013,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WBooks;
 			};
 			name = Release;
@@ -949,6 +1022,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -958,12 +1032,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1010,7 +1086,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Production;
@@ -1027,7 +1103,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WBooks.app/WBooks";
 			};
 			name = Production;
@@ -1039,7 +1115,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wolox.WBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WBooks;
 			};
 			name = Production;

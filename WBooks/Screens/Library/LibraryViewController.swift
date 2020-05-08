@@ -48,9 +48,8 @@ class LibraryViewController: BaseViewController {
         _view.booksTable.delegate = self
         _view.booksTable.dataSource = self
         _view.booksTable.register(cell: CustomBookCell.self)
-
-            
-        }
+    }
+    
     func fetchDataSuccess() {
         _view.booksTable.reloadData()
         updateLoadingDisplay(loading: false)
@@ -58,7 +57,7 @@ class LibraryViewController: BaseViewController {
     
     func fetchDataError() {
         updateLoadingDisplay(loading: false)
-        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE", message: "REQUEST_ERROR_BODY", preferredStyle: .alert)
+        let alert = UIAlertController(title: "REQUEST_ERROR_TITLE".localized(), message: "REQUEST_ERROR_BODY".localized(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
@@ -94,5 +93,11 @@ extension LibraryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         _libraryViewModel.numberOfBooks
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bookDetailsVM = BookDetailsViewModel(bookModel: _libraryViewModel.booksList[indexPath.row])
+        let bookVC = BookDetailsViewController(viewModel: bookDetailsVM)
+        navigationController?.pushViewController(bookVC, animated: true)
     }
 }

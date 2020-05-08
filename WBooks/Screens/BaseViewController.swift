@@ -25,11 +25,15 @@ class BaseViewController: UIViewController {
     }
     
     func setLeftButtonImage(customImage: UIImage) {
-        setNavigationLeftButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
+        setNavigationLeftButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItem.Style.plain, target: nil, action: nil)])
     }
     
     func setRightButtonImage(customImage: UIImage) {
-        setNavigationRightButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItemStyle.plain, target: nil, action: nil)])
+        setNavigationRightButtons([UIBarButtonItem(image: customImage, style: UIBarButtonItem.Style.plain, target: nil, action: nil)])
+    }
+    
+    func setNavigationBackButton() {
+        setNavigationBarBackButton(UIImage.backIcon)
     }
     
     func setNavigationBarBackgroundImage() {

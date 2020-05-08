@@ -30,9 +30,10 @@ class CustomBookCell: UITableViewCell, NibLoadable {
     }
     
     func setBookAttributes(cellVM: CustomBookCellViewModel) {
-        imageSource.image = UIImage.defaultBook
         if let image = cellVM.image {
-            imageSource.loadUrl(from: image)
+            imageSource.loadUrl(from: image, defaultImage: .defaultBook)
+        } else {
+            imageSource.image = .defaultBook
         }
         titleLabel.text = cellVM.title
         subtitleLabel.text = cellVM.author

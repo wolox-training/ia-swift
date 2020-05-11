@@ -29,7 +29,6 @@
 		5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */; };
 		5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */; };
 		5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E06243A59E4006F3B98 /* BookDetailsView.swift */; };
-		5E435E09243A59F5006F3B98 /* BookDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */; };
 		5E435E0F243A5EF2006F3B98 /* BookDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */; };
 		5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DD923DBB47500430E41 /* TabBarController.swift */; };
 		5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */; };
@@ -37,6 +36,14 @@
 		5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78223DA153500C8103A /* UIColorExtension.swift */; };
 		5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6DD78423DA18B800C8103A /* UIImageExtension.swift */; };
 		5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E6DD78C23DA2BB800C8103A /* Localizable.strings */; };
+		5EA186762468E12B00466244 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA186752468E12B00466244 /* CommentsTableViewController.swift */; };
+		5EA186782468E13C00466244 /* CommentsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA186772468E13C00466244 /* CommentsTableViewModel.swift */; };
+		5EA1867A2468E16200466244 /* CommentsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA186792468E16200466244 /* CommentsTableView.swift */; };
+		5EA1867C2468E5EA00466244 /* CommentsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA1867B2468E5EA00466244 /* CommentsTableView.xib */; };
+		5EA1867E2468E7AE00466244 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1867D2468E7AE00466244 /* CardDetailsView.swift */; };
+		5EA186802468E7BC00466244 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA1867F2468E7BC00466244 /* CardDetailsViewModel.swift */; };
+		5EA186822468E7C900466244 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA186812468E7C900466244 /* CardDetailsViewController.swift */; };
+		5EA186842468FE8500466244 /* CardDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA186832468FE8500466244 /* CardDetailsView.xib */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
 		5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */; };
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
@@ -124,7 +131,6 @@
 		5E435DFF2437CE6F006F3B98 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		5E435E06243A59E4006F3B98 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
-		5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewModel.swift; sourceTree = "<group>"; };
 		5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailsView.xib; sourceTree = "<group>"; };
 		5E4D8DD923DBB47500430E41 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5E4D8DDB23DBB55100430E41 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +139,14 @@
 		5E6DD78423DA18B800C8103A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		5E6DD78B23DA2BB800C8103A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5E6DD78D23DA2BC200C8103A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5EA186752468E12B00466244 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		5EA186772468E13C00466244 /* CommentsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewModel.swift; sourceTree = "<group>"; };
+		5EA186792468E16200466244 /* CommentsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableView.swift; sourceTree = "<group>"; };
+		5EA1867B2468E5EA00466244 /* CommentsTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsTableView.xib; sourceTree = "<group>"; };
+		5EA1867D2468E7AE00466244 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
+		5EA1867F2468E7BC00466244 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
+		5EA186812468E7C900466244 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		5EA186832468FE8500466244 /* CardDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardDetailsView.xib; sourceTree = "<group>"; };
 		5EA8104F23CF4604001559C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5EA8105423CF4C35001559C9 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -240,10 +254,10 @@
 		5E435E032439AEDE006F3B98 /* BookDetails */ = {
 			isa = PBXGroup;
 			children = (
-				5E24216A245BE3B90091223D /* CommentCell */,
+				5EA186742468E0DC00466244 /* CardDetails */,
+				5EA186732468E0B800466244 /* CommentsTable */,
 				5E435E04243A59D2006F3B98 /* BookDetailsViewController.swift */,
 				5E435E06243A59E4006F3B98 /* BookDetailsView.swift */,
-				5E435E08243A59F5006F3B98 /* BookDetailsViewModel.swift */,
 				5E435E0E243A5EF2006F3B98 /* BookDetailsView.xib */,
 			);
 			path = BookDetails;
@@ -269,6 +283,29 @@
 				5E6DD78C23DA2BB800C8103A /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		5EA186732468E0B800466244 /* CommentsTable */ = {
+			isa = PBXGroup;
+			children = (
+				5E24216A245BE3B90091223D /* CommentCell */,
+				5EA186752468E12B00466244 /* CommentsTableViewController.swift */,
+				5EA186772468E13C00466244 /* CommentsTableViewModel.swift */,
+				5EA186792468E16200466244 /* CommentsTableView.swift */,
+				5EA1867B2468E5EA00466244 /* CommentsTableView.xib */,
+			);
+			path = CommentsTable;
+			sourceTree = "<group>";
+		};
+		5EA186742468E0DC00466244 /* CardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5EA186832468FE8500466244 /* CardDetailsView.xib */,
+				5EA1867D2468E7AE00466244 /* CardDetailsView.swift */,
+				5EA1867F2468E7BC00466244 /* CardDetailsViewModel.swift */,
+				5EA186812468E7C900466244 /* CardDetailsViewController.swift */,
+			);
+			path = CardDetails;
 			sourceTree = "<group>";
 		};
 		5EA8105323CF4C35001559C9 /* ConfigurationFiles */ = {
@@ -554,10 +591,12 @@
 				5E1319FB23D62C5D00C2CC49 /* CustomBookCell.xib in Resources */,
 				5E242170245BE43F0091223D /* CommentCell.xib in Resources */,
 				5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */,
+				5EA186842468FE8500466244 /* CardDetailsView.xib in Resources */,
 				5E435E0F243A5EF2006F3B98 /* BookDetailsView.xib in Resources */,
 				5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */,
+				5EA1867C2468E5EA00466244 /* CommentsTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,9 +672,11 @@
 				5E24216C245BE3F10091223D /* CommentCell.swift in Sources */,
 				5E242172245F9E6D0091223D /* Comment.swift in Sources */,
 				5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */,
+				5EA1867A2468E16200466244 /* CommentsTableView.swift in Sources */,
 				5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */,
 				5E242169245BA5E30091223D /* UIAlertControllerExtension.swift in Sources */,
 				5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */,
+				5EA186802468E7BC00466244 /* CardDetailsViewModel.swift in Sources */,
 				5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */,
 				5E435E002437CE6F006F3B98 /* UIImageViewExtension.swift in Sources */,
 				5E1319F923D62C4000C2CC49 /* CustomBookCell.swift in Sources */,
@@ -644,6 +685,7 @@
 				5E1319F523D626A900C2CC49 /* LibraryView.swift in Sources */,
 				5E4D8DDC23DBB55100430E41 /* WishListViewController.swift in Sources */,
 				5E6DD78023DA0ACA00C8103A /* WBooksNavigationController.swift in Sources */,
+				5EA1867E2468E7AE00466244 /* CardDetailsView.swift in Sources */,
 				5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
@@ -651,13 +693,15 @@
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
 				5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
+				5EA186822468E7C900466244 /* CardDetailsViewController.swift in Sources */,
 				5E0C9F5D2464550E00C96E4C /* UITableViewExtension.swift in Sources */,
-				5E435E09243A59F5006F3B98 /* BookDetailsViewModel.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				5EFF0EC124368B4A0044F96E /* Book.swift in Sources */,
+				5EA186762468E12B00466244 /* CommentsTableViewController.swift in Sources */,
 				5E1319F723D6293D00C2CC49 /* LibraryViewController.swift in Sources */,
 				5EFF0EB8243615B60044F96E /* LibraryViewModel.swift in Sources */,
 				5E0C9F5F2464840100C96E4C /* Rent.swift in Sources */,
+				5EA186782468E13C00466244 /* CommentsTableViewModel.swift in Sources */,
 				5E6DD78323DA153500C8103A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

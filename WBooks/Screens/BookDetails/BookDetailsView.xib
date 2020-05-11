@@ -13,8 +13,32 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookDetailsView" customModule="WBooks" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ve-uE-1Zs" userLabel="DetailsView">
+                    <rect key="frame" x="0.0" y="64" width="414" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="edp-tZ-tv3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5Qm-o4-WMl" userLabel="CommentsTable">
+                    <rect key="frame" x="20" y="434" width="374" height="428"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9ve-uE-1Zs" secondAttribute="trailing" id="8tg-hI-uGQ"/>
+                <constraint firstItem="5Qm-o4-WMl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Fg5-SV-KwS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Qm-o4-WMl" secondAttribute="trailing" constant="20" id="Jkw-3Y-9H9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Qm-o4-WMl" secondAttribute="bottom" id="QaP-QX-XK4"/>
+                <constraint firstItem="9ve-uE-1Zs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="afz-A5-PpZ"/>
+                <constraint firstItem="5Qm-o4-WMl" firstAttribute="top" secondItem="9ve-uE-1Zs" secondAttribute="bottom" constant="20" id="bq4-Ov-Yyc"/>
+                <constraint firstItem="9ve-uE-1Zs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="nz9-Hk-w0e"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookDetails" destination="9ve-uE-1Zs" id="xTw-8g-GMc"/>
+                <outlet property="commentsTable" destination="5Qm-o4-WMl" id="sQy-ZJ-86X"/>
+            </connections>
             <point key="canvasLocation" x="34.782608695652179" y="-207.58928571428569"/>
         </view>
     </objects>

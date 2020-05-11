@@ -11,25 +11,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleAspectFit" id="iN0-l3-epB" userLabel="Comments Table View" customClass="CommentsTableView" customModule="WBooks" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thq-5z-ttQ" userLabel="Comments Table">
-                    <rect key="frame" x="20" y="398" width="374" height="464"/>
+                    <rect key="frame" x="20" y="0.0" width="374" height="464"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="x37-TO-yu4" userLabel="CommentsLoading">
-                    <rect key="frame" x="20" y="608" width="374" height="44"/>
+                    <rect key="frame" x="20" y="210" width="374" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="trailing" secondItem="x37-TO-yu4" secondAttribute="trailing" id="1S0-DE-e2K"/>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="leading" secondItem="x37-TO-yu4" secondAttribute="leading" id="DQc-uV-eJd"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="DQc-uV-eJd"/>
                 <constraint firstItem="thq-5z-ttQ" firstAttribute="centerY" secondItem="x37-TO-yu4" secondAttribute="centerY" id="EcP-Bm-stJ"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FbV-6S-v3P"/>
                 <constraint firstItem="thq-5z-ttQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kpp-ji-Ued"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="thq-5z-ttQ" secondAttribute="trailing" constant="20" id="x1B-nU-xIU"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="commentsLoadingIndicator" destination="x37-TO-yu4" id="5Zg-1t-Aux"/>

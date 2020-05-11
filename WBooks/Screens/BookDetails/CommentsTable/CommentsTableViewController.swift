@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentsTableViewController: BaseViewController {
+class CommentsTableViewController: UIViewController {
     private let _commentsTableViewModel: CommentsTableViewModel
     private let _view: CommentsTableView = CommentsTableView.loadFromNib()!
     

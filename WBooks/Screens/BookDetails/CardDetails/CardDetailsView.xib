@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="CardDetailsView" id="iN0-l3-epB" userLabel="Card Details View" customClass="CardDetailsView" customModule="WBooks" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-Bb-aG2">
@@ -112,7 +112,7 @@
                     <edgeInsets key="layoutMargins" top="8" left="30" bottom="22" right="30"/>
                 </stackView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gAG-im-JY5">
-                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <rect key="frame" x="197" y="218" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +123,7 @@
                 <constraint firstItem="gAG-im-JY5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ofC-36-yRa"/>
                 <constraint firstItem="gAG-im-JY5" firstAttribute="centerX" secondItem="xrs-Bb-aG2" secondAttribute="centerX" id="too-0E-eLu"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="activityIndicator" destination="gAG-im-JY5" id="4Ad-Ad-OLE"/>

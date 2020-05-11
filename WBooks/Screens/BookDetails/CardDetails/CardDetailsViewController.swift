@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardDetailsViewController: BaseViewController {
+class CardDetailsViewController: UIViewController {
     private let _cardDetailsViewModel: CardDetailsViewModel
     private let _view: CardDetailsView = CardDetailsView.loadFromNib()!
     
@@ -42,8 +42,6 @@ class CardDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
-        setTitle(headerTitle: "BOOK_DETAILS_HEADER_TITLE".localized())
-        setNavigationBackButton()
         _view.rentButton.addTarget(self, action: #selector(rentButtonTapped), for: .touchUpInside)
     }
     

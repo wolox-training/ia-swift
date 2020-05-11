@@ -10,4 +10,6 @@ import UIKit
 import WolmoCore
 
 class BookDetailsView: UIView, NibLoadable {
+    @IBOutlet weak var bookDetails: UIView!
+    @IBOutlet weak var commentsTable: UIView!
 }

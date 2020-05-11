@@ -43,11 +43,9 @@ class BookDetailsViewController: BaseViewController {
     
     func addViewControllers() {
         let cardDetailsController = CardDetailsViewController(viewModel: _cardDetailsViewModel)
-        addChild(cardDetailsController)
-        view.addSubview(cardDetailsController.view)
         let commentsViewModel = CommentsTableViewModel(bookId: _cardDetailsViewModel.id)
         let commentsTableController = CommentsTableViewController(viewModel: commentsViewModel)
-        addChild(commentsTableController)
-        view.addSubview(commentsTableController.view)
+        load(childViewController: cardDetailsController, into: _view.bookDetails, respectSafeArea: true)
+        load(childViewController: commentsTableController, into: _view.commentsTable, respectSafeArea: true)
     }
 }

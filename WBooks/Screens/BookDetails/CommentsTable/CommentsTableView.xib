@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thq-5z-ttQ" userLabel="Comments Table">
-                    <rect key="frame" x="20" y="0.0" width="374" height="464"/>
+                    <rect key="frame" x="0.0" y="10" width="414" height="454"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="x37-TO-yu4" userLabel="CommentsLoading">
@@ -23,13 +23,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="DQc-uV-eJd"/>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="centerY" secondItem="x37-TO-yu4" secondAttribute="centerY" id="EcP-Bm-stJ"/>
-                <constraint firstItem="thq-5z-ttQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FbV-6S-v3P"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DQc-uV-eJd"/>
+                <constraint firstItem="thq-5z-ttQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="aye-DK-xYg"/>
                 <constraint firstItem="thq-5z-ttQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kpp-ji-Ued"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="thq-5z-ttQ" secondAttribute="trailing" constant="20" id="x1B-nU-xIU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="thq-5z-ttQ" secondAttribute="trailing" id="x1B-nU-xIU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -31,7 +31,6 @@ class BookDetailsViewController: BaseViewController {
     
     override public func loadView() {
         view = _view
-        addViewControllers()
     }
     
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ class BookDetailsViewController: BaseViewController {
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "BOOK_DETAILS_HEADER_TITLE".localized())
         setNavigationBackButton()
+        addViewControllers()
     }
     
     func addViewControllers() {

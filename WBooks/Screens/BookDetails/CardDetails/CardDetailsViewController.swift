@@ -31,17 +31,17 @@ class CardDetailsViewController: UIViewController {
     
     override public func loadView() {
         view = _view
-        _view.setupBookDetails(title: _cardDetailsViewModel.title,
-                               genre: _cardDetailsViewModel.genre,
-                               year: _cardDetailsViewModel.year,
-                               author: _cardDetailsViewModel.author,
-                               status: _cardDetailsViewModel.status,
-                               image: _cardDetailsViewModel.image)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
+        _view.setupBookDetails(title: _cardDetailsViewModel.title,
+                                genre: _cardDetailsViewModel.genre,
+                                year: _cardDetailsViewModel.year,
+                                author: _cardDetailsViewModel.author,
+                                status: _cardDetailsViewModel.status,
+                                image: _cardDetailsViewModel.image)
         _view.rentButton.addTarget(self, action: #selector(rentButtonTapped), for: .touchUpInside)
     }
     

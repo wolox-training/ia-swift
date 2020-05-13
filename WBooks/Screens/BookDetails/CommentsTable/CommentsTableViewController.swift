@@ -36,8 +36,8 @@ class CommentsTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        _view.updateCommentsLoading(isLoading: true)
-        _commentsTableViewModel.getBookComments(onSuccess: getCommentsSuccess, onError: getCommentsError)
+        _commentsTableViewModel.commentsTableState.signal.observeValues(setupTableByState)
+        _commentsTableViewModel.getBookComments()
     }
     
     func setupTableView() {
@@ -48,22 +48,25 @@ class CommentsTableViewController: UIViewController {
     }
 }
 
-// MARK: - Extension for request callbacks
+// MARK: - Extension for setup table by result of request
 extension CommentsTableViewController {
-    func getCommentsSuccess() {
-        _view.updateCommentsLoading(isLoading: false)
-        if _commentsTableViewModel.isEmptyComments {
-            _view.commentsTable.setEmptyMessage("EMPTY_BOOK_COMMENTS".localized())
-        } else {
+    func setupTableByState(state: CommentsTableState) {
+        switch state {
+        case .loading:
+            _view.updateCommentsLoading(isLoading: true)
+        case .value:
+            _view.updateCommentsLoading(isLoading: false)
             _view.commentsTable.restore()
+            _view.commentsTable.reloadData()
+        case .error:
+            _view.updateCommentsLoading(isLoading: false)
+            let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
+            present(alert, animated: true)
+        case .empty:
+            _view.updateCommentsLoading(isLoading: false)
+            _view.commentsTable.setEmptyMessage("EMPTY_BOOK_COMMENTS".localized())
+            _view.commentsTable.reloadData()
         }
-        _view.commentsTable.reloadData()
-    }
-    
-    func getCommentsError() {
-        _view.updateCommentsLoading(isLoading: false)
-        let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
-        present(alert, animated: true)
     }
 }
 

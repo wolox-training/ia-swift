@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class CardDetailsViewController: UIViewController {
     private let _cardDetailsViewModel: CardDetailsViewModel
@@ -42,10 +43,13 @@ class CardDetailsViewController: UIViewController {
                                 author: _cardDetailsViewModel.author,
                                 status: _cardDetailsViewModel.status,
                                 image: _cardDetailsViewModel.image)
-        _view.rentButton.addTarget(self, action: #selector(rentButtonTapped), for: .touchUpInside)
+        _view.rentButton.reactive.controlEvents(.touchUpInside).observeValues { _ in self.rentButtonTapped() }
+        _view.addToWishButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
+            print("Add to wish list button")
+        }
     }
     
-    @objc private func rentButtonTapped() {
+    func rentButtonTapped() {
         if _cardDetailsViewModel.status == BookStatus.unavailable {
             let alert = UIAlertController.createErrorAlert(message: "RENT_UNAVAILABLE".localized())
             present(alert, animated: true)

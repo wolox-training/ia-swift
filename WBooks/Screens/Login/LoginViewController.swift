@@ -34,10 +34,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _view.loginButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+        _view.loginButton.reactive.controlEvents(.touchUpInside).observeValues { _ in self.buttonTapped() }
     }
 
-    @objc private func buttonTapped() {
+    func buttonTapped() {
         let homeViewController = TabBarController()
         homeViewController.modalPresentationStyle = .fullScreen
         present(homeViewController, animated: true, completion: nil)

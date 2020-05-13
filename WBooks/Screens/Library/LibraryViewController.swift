@@ -40,8 +40,8 @@ class LibraryViewController: BaseViewController {
         setLeftButtonImage(customImage: UIImage.notificationsIcon)
         setRightButtonImage(customImage: UIImage.searchIcon)
         setupTableView()
-        updateLoadingDisplay(loading: true)
-        _libraryViewModel.getBooks(onSuccess: fetchDataSuccess, onError: fetchDataError)
+        _libraryViewModel.libraryTableState.signal.observeValues(setupTableByState)
+        _libraryViewModel.getBooks()
     }
     
     func setupTableView() {
@@ -75,6 +75,24 @@ class LibraryViewController: BaseViewController {
             }
         }
     }
+    
+    func setupTableByState(state: LibraryTableState) {
+        switch state {
+        case .value:
+            _view.booksTable.reloadData()
+            updateLoadingDisplay(loading: false)
+        case .empty:
+            _view.booksTable.reloadData()
+            updateLoadingDisplay(loading: false)
+        case .error:
+            updateLoadingDisplay(loading: false)
+            let alert = UIAlertController(title: "REQUEST_ERROR_TITLE".localized(), message: "REQUEST_ERROR_BODY".localized(), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        case .loading:
+            updateLoadingDisplay(loading: true)
+        }
+    }
 }
 
 extension LibraryViewController: UITableViewDelegate {
@@ -96,7 +114,7 @@ extension LibraryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let bookDetailsVM = CardDetailsViewModel(bookModel: _libraryViewModel.booksList[indexPath.row])
+        let bookDetailsVM = CardDetailsViewModel(bookModel: _libraryViewModel.getBookList()[indexPath.row])
         let bookVC = BookDetailsViewController(viewModel: bookDetailsVM)
         navigationController?.pushViewController(bookVC, animated: true)
     }

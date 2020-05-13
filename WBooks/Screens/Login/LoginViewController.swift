@@ -34,7 +34,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _view.loginButton.reactive.controlEvents(.touchUpInside).observeValues { _ in self.buttonTapped() }
     }
 

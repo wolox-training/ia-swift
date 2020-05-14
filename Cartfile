@@ -10,3 +10,6 @@ github "rollbar/rollbar-ios" "master"
 
 # Requests logger
 github "pmusolino/Wormholy" ~> 1.1.3
+
+# Request parser
+github "thoughtbot/Argo"

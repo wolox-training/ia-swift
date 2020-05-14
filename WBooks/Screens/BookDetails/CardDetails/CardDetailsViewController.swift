@@ -43,6 +43,7 @@ class CardDetailsViewController: UIViewController {
                                 author: _cardDetailsViewModel.author,
                                 status: _cardDetailsViewModel.status,
                                 image: _cardDetailsViewModel.image)
+        _cardDetailsViewModel.rentState.signal.observeValues(setupRentStatus)
         _view.rentButton.reactive.controlEvents(.touchUpInside).observeValues { _ in self.rentButtonTapped() }
         _view.addToWishButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
             print("Add to wish list button")
@@ -55,21 +56,24 @@ class CardDetailsViewController: UIViewController {
             present(alert, animated: true)
         } else {
             _view.updateRentLoading(isLoading: true)
-            _cardDetailsViewModel.rentBook(onSuccess: rentBookSuccess, onError: rentBookError)
+            _cardDetailsViewModel.rentBook()
         }
     }
 }
 
 // MARK: - Extension for request callbacks
 extension CardDetailsViewController {
-    func rentBookSuccess() {
-        _view.updateStatusStyle(newStatus: _cardDetailsViewModel.status)
-        _view.updateRentLoading(isLoading: false)
-    }
-    
-    func rentBookError() {
-        let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
-        present(alert, animated: true)
-        _view.updateRentLoading(isLoading: false)
+    func setupRentStatus(state: RentResultState) {
+        switch state {
+        case .success:
+            _view.updateStatusStyle(newStatus: _cardDetailsViewModel.status)
+            _view.updateRentLoading(isLoading: false)
+        case .error:
+            let alert = UIAlertController.createErrorAlert(message: "RENT_ERROR".localized())
+            present(alert, animated: true)
+            _view.updateRentLoading(isLoading: false)
+        case .loading:
+            _view.updateRentLoading(isLoading: true)
+        }
     }
 }

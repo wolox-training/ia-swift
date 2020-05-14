@@ -6,35 +6,24 @@
 //  Copyright © 2020 Wolox. All rights reserved.
 //
 
-import Foundation
 import Result
-import Alamofire
+import Networking
+import Argo
+import ReactiveSwift
 
-class UserRepository {
+class UserRepository: AbstractRepository {
+    private static let postRentPath = "/users/5/rents"
     
-    let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
-    let header: HTTPHeaders = ["Content-Type": "application/json"]
-    
-    func rentBook(rentModel: Rent, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
-        let endpoint = "\(baseUrl)/users/5/rents"
+    func rentBook(rentModel: Rent) -> SignalProducer<Rent, RepositoryError> {
+        let path = UserRepository.postRentPath
         let params: [String: Any] = [
             "userID": 5,
             "bookID": rentModel.bookId,
             "from": rentModel.from,
             "to": rentModel.to
         ]
-        request(endpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header ).responseJSON { response in
-            switch response.result {
-            case .success:
-                print("sucesssss")
-                onSuccess()
-            case .failure(let error):
-                onError(error)
-            }
+        return performRequest(method: .post, path: path, parameters: params) { json in
+            return decode(json).toResult()
         }
     }
-}
-
-enum CommentError: Error {
-    case decodeError
 }

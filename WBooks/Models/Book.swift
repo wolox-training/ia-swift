@@ -6,9 +6,11 @@
 //  Copyright © 2020 Wolox. All rights reserved.
 //
 
-import Foundation
+import Argo
+import Curry
+import Runes
 
-struct Book: Codable {
+struct Book {
     
     let id: Int
     let title: String
@@ -20,13 +22,15 @@ struct Book: Codable {
 
 }
 
-// Book Json keys enum
-enum BookKey: String, CodingKey {
-    case id
-    case title
-    case author
-    case genre
-    case year
-    case image
-    case status
+extension Book: Argo.Decodable {
+    static func decode(_ json: JSON) -> Decoded<Book> {
+        return curry(Book.init)
+        <^> json <| "id"
+        <*> json <| "title"
+        <*> json <| "author"
+        <*> json <| "genre"
+        <*> json <| "year"
+        <*> json <|? "image"
+        <*> json <| "status"
+    }
 }

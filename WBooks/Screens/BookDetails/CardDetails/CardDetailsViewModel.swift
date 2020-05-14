@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import ReactiveSwift
 
 class CardDetailsViewModel {
-    private let _bookRepository = BookRepository()
-    private let _userRepository = UserRepository()
+    private let _userRepository = RepositoryBuilder.getDefaultUserRepository()
     private var _bookModel: Book
+    let rentState = MutableProperty<RentResultState>(.loading)
     
     init(bookModel: Book) {
         _bookModel = bookModel
@@ -48,23 +49,35 @@ class CardDetailsViewModel {
 }
 
 extension CardDetailsViewModel {
-    func rentBook(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
-        let rentSuccess = {
-            self._bookModel.status = BookStatus.unavailable.rawValue
-            onSuccess()
-        }
-        let rentError: (Error) -> Void = { error in
-            onError()
-            print(error)
-        }
+    
+    // MARK: - Api requests
+    
+    func rentBook() {
+        rentState.value = .loading
         let from = Date()
         let to = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
         let rentModel = Rent(bookId: _bookModel.id, from: from, to: to)
-        _userRepository.rentBook(rentModel: rentModel, onSuccess: rentSuccess, onError: rentError)
+        _userRepository.rentBook(rentModel: rentModel).startWithResult { [weak self] result in
+            switch result {
+            case .success(let result):
+                print(result)
+                self?._bookModel.status = BookStatus.unavailable.rawValue
+                self?.rentState.value = .success
+            case .failure(let error):
+                print(error)
+                self?.rentState.value = .error
+            }
+        }
     }
 }
 
 enum BookStatus: String {
     case available = "Available"
     case unavailable = "Unavailable"
+}
+
+enum RentResultState {
+    case loading
+    case success
+    case error
 }

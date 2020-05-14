@@ -10,7 +10,7 @@ import Foundation
 import ReactiveSwift
 
 class CommentsTableViewModel {
-    private var _bookRepository = BookRepository()
+    private var _bookRepository = RepositoryBuilder.getDefaultBookRepository()
     private var _bookId: Int
     private let _commentsList = MutableProperty<[Comment]>([])
     let commentsTableState = MutableProperty(CommentsTableState.loading)
@@ -33,15 +33,21 @@ class CommentsTableViewModel {
 }
 
 extension CommentsTableViewModel {
+    
+    // MARK: - Api requests
+    
     func getBookComments() {
-        let commentsSuccess: ([Comment]) -> Void = { comments in
-            self._commentsList.value = comments
-            self.commentsTableState.value = comments.isEmpty ? .empty : .value
+        commentsTableState.value = .loading
+        _bookRepository.fetchComments(bookId: _bookId).startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?._commentsList.value = resultArray
+                self?.commentsTableState.value = resultArray.isEmpty ? .empty : .value
+            case .failure(let error):
+               print(error)
+               self?.commentsTableState.value = .error
+            }
         }
-        let commentsError: (Error) -> Void = { error in
-            print(error)
-        }
-        _bookRepository.fetchComments(bookId: _bookId, onSuccess: commentsSuccess, onError: commentsError)
     }
 }
 

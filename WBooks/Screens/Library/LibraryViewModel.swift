@@ -9,7 +9,7 @@ import UIKit
 import ReactiveSwift
 
 class LibraryViewModel {
-    private let bookRepository = BookRepository()
+    private let bookRepository = RepositoryBuilder.getDefaultBookRepository()
     private let booksList = MutableProperty<[Book]>([])
     let libraryTableState = MutableProperty(LibraryTableState.loading)
     
@@ -24,21 +24,24 @@ class LibraryViewModel {
     func getBookList() -> [Book] {
         booksList.value
     }
+}
+
+extension LibraryViewModel {
     
-    // API request
+    // MARK: - Api requests
+    
     func getBooks() {
         libraryTableState.value = .loading
-        let fetchSuccess: ([Book]) -> Void = { books in
-            self.booksList.value = books
-            self.libraryTableState.value = books.isEmpty ? .empty : .value
+        self.bookRepository.fetchBooks().startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?.booksList.value = resultArray
+               self?.libraryTableState.value = resultArray.isEmpty ? .empty : .value
+            case .failure(let error):
+               print(error)
+               self?.libraryTableState.value = .error
+            }
         }
-        
-        let onError: (Error) -> Void = { error in
-            self.libraryTableState.value = .error
-            print(error)
-        }
-        
-        bookRepository.fetchBooks(onSuccess: fetchSuccess, onError: onError)
     }
 }
 

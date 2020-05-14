@@ -81,7 +81,7 @@
                                         <color key="titleColor" red="0.0" green="0.67843137254901964" blue="0.93333333333333335" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-fS-WhF">
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQt-fS-WhF">
                                     <rect key="frame" x="0.0" y="54" width="314" height="44"/>
                                     <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     <constraints>

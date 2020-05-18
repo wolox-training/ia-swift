@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SuggestionsView" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oMK-ED-qfG" userLabel="SuggestCard">
+                    <rect key="frame" x="20" y="84" width="374" height="768"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-fE-hrE" userLabel="BookImage">
+                            <rect key="frame" x="30" y="26" width="96" height="96"/>
+                            <color key="backgroundColor" red="0.91764705879999997" green="0.96470588239999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="96" id="VNz-Fg-449"/>
+                                <constraint firstAttribute="width" constant="96" id="ZFr-zr-ThU"/>
+                            </constraints>
+                            <state key="normal" image="ic_add_new">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhx-63-Vrg" userLabel="Fields">
+                            <rect key="frame" x="30" y="152" width="314" height="522"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="18"/>
+                        </view>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofb-39-Uk5">
+                            <rect key="frame" x="30" y="704" width="314" height="44"/>
+                            <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ozE-dB-QDC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                            <state key="normal" title="SUBMIT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="bgq-fE-hrE" firstAttribute="leading" secondItem="oMK-ED-qfG" secondAttribute="leadingMargin" id="3JW-oZ-Ls4"/>
+                        <constraint firstItem="ofb-39-Uk5" firstAttribute="leading" secondItem="oMK-ED-qfG" secondAttribute="leadingMargin" id="RCp-Uc-naK"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="ofb-39-Uk5" secondAttribute="trailing" id="dtW-Rn-XGE"/>
+                        <constraint firstItem="bgq-fE-hrE" firstAttribute="top" secondItem="oMK-ED-qfG" secondAttribute="topMargin" id="f3Q-Df-wgO"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="26" left="30" bottom="20" right="30"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oMK-ED-qfG" secondAttribute="trailing" constant="20" id="9aJ-kI-pdc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oMK-ED-qfG" secondAttribute="bottom" constant="10" id="Q3h-SZ-4en"/>
+                <constraint firstItem="oMK-ED-qfG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="doh-kp-Aoz"/>
+                <constraint firstItem="oMK-ED-qfG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="pjb-JN-8fI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookImage" destination="bgq-fE-hrE" id="U56-F1-yaM"/>
+                <outlet property="submitButton" destination="ofb-39-Uk5" id="eD2-Jb-ivN"/>
+                <outlet property="suggestCard" destination="oMK-ED-qfG" id="4gR-QG-tgR"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_add_new" width="25" height="25"/>
+    </resources>
+</document>

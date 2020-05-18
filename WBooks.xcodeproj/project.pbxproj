@@ -46,6 +46,10 @@
 		5EA186822468E7C900466244 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA186812468E7C900466244 /* CardDetailsViewController.swift */; };
 		5EA186842468FE8500466244 /* CardDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA186832468FE8500466244 /* CardDetailsView.xib */; };
 		5EA8105023CF4604001559C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA8104F23CF4604001559C9 /* LoginViewController.swift */; };
+		5EBA3F3F2472E43D00EE91EA /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F3E2472E43D00EE91EA /* SuggestionsView.swift */; };
+		5EBA3F412472E44A00EE91EA /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */; };
+		5EBA3F432472E45700EE91EA /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */; };
+		5EBA3F452472E46C00EE91EA /* SuggestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */; };
 		5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */; };
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
 		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
@@ -154,6 +158,10 @@
 		5EA8105523CF4C36001559C9 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		5EA8105623CF4C36001559C9 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		5EA8105723CF4C36001559C9 /* Alpha.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		5EBA3F3E2472E43D00EE91EA /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
+		5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
+		5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsView.xib; sourceTree = "<group>"; };
 		5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5EDCAFCD23CE6177005F8E32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5EDCAFCF23CE6196005F8E32 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -322,6 +330,17 @@
 			path = ConfigurationFiles;
 			sourceTree = "<group>";
 		};
+		5EBA3F3D2472E42700EE91EA /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA3F3E2472E43D00EE91EA /* SuggestionsView.swift */,
+				5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */,
+				5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */,
+				5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
 		5EBAA7032431809F005D35E7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +374,7 @@
 		5EDCAFCC23CE615D005F8E32 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5EBA3F3D2472E42700EE91EA /* Suggestions */,
 				5E435E032439AEDE006F3B98 /* BookDetails */,
 				5EBAA70524318121005D35E7 /* WishList */,
 				5EBAA704243180F1005D35E7 /* Login */,
@@ -599,6 +619,7 @@
 				5E6DD78A23DA2BB800C8103A /* Localizable.strings in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				5E1319F323D6267300C2CC49 /* LibraryView.xib in Resources */,
+				5EBA3F452472E46C00EE91EA /* SuggestionsView.xib in Resources */,
 				5EA1867C2468E5EA00466244 /* CommentsTableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +695,7 @@
 				5E1E1F5F246C528C004620F4 /* RepositoryBuilder.swift in Sources */,
 				5E242167245B6FEB0091223D /* UIStackViewExtension.swift in Sources */,
 				5E24216C245BE3F10091223D /* CommentCell.swift in Sources */,
+				5EBA3F432472E45700EE91EA /* SuggestionsViewModel.swift in Sources */,
 				5E242172245F9E6D0091223D /* Comment.swift in Sources */,
 				5E435E07243A59E4006F3B98 /* BookDetailsView.swift in Sources */,
 				5EA1867A2468E16200466244 /* CommentsTableView.swift in Sources */,
@@ -692,9 +714,11 @@
 				5EA1867E2468E7AE00466244 /* CardDetailsView.swift in Sources */,
 				5E0C9F612464887500C96E4C /* UserRepository.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
+				5EBA3F3F2472E43D00EE91EA /* SuggestionsView.swift in Sources */,
 				5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */,
+				5EBA3F412472E44A00EE91EA /* SuggestionsViewController.swift in Sources */,
 				5EFF0EBA2436166C0044F96E /* CustomBookCellViewModel.swift in Sources */,
 				5E6DD78523DA18B800C8103A /* UIImageExtension.swift in Sources */,
 				5EA186822468E7C900466244 /* CardDetailsViewController.swift in Sources */,

@@ -50,6 +50,7 @@
 		5EBA3F412472E44A00EE91EA /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */; };
 		5EBA3F432472E45700EE91EA /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */; };
 		5EBA3F452472E46C00EE91EA /* SuggestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */; };
+		5EBA3F482473122E00EE91EA /* CustomFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA3F472473122E00EE91EA /* CustomFieldInput.swift */; };
 		5ECDFC3323D8DDE1003438CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */; };
 		5EDCAFCE23CE6177005F8E32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCD23CE6177005F8E32 /* LoginView.swift */; };
 		5EDCAFD023CE6196005F8E32 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDCAFCF23CE6196005F8E32 /* LoginView.xib */; };
@@ -162,6 +163,7 @@
 		5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
 		5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsView.xib; sourceTree = "<group>"; };
+		5EBA3F472473122E00EE91EA /* CustomFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFieldInput.swift; sourceTree = "<group>"; };
 		5ECDFC3223D8DDE1003438CB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5EDCAFCD23CE6177005F8E32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5EDCAFCF23CE6196005F8E32 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -333,12 +335,21 @@
 		5EBA3F3D2472E42700EE91EA /* Suggestions */ = {
 			isa = PBXGroup;
 			children = (
+				5EBA3F462473121100EE91EA /* CustomFieldInput */,
 				5EBA3F3E2472E43D00EE91EA /* SuggestionsView.swift */,
 				5EBA3F402472E44A00EE91EA /* SuggestionsViewController.swift */,
 				5EBA3F422472E45700EE91EA /* SuggestionsViewModel.swift */,
 				5EBA3F442472E46C00EE91EA /* SuggestionsView.xib */,
 			);
 			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		5EBA3F462473121100EE91EA /* CustomFieldInput */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA3F472473122E00EE91EA /* CustomFieldInput.swift */,
+			);
+			path = CustomFieldInput;
 			sourceTree = "<group>";
 		};
 		5EBAA7032431809F005D35E7 /* Library */ = {
@@ -701,6 +712,7 @@
 				5EA1867A2468E16200466244 /* CommentsTableView.swift in Sources */,
 				5E4D8DDA23DBB47500430E41 /* TabBarController.swift in Sources */,
 				5E242169245BA5E30091223D /* UIAlertControllerExtension.swift in Sources */,
+				5EBA3F482473122E00EE91EA /* CustomFieldInput.swift in Sources */,
 				5E435E05243A59D2006F3B98 /* BookDetailsViewController.swift in Sources */,
 				5EA186802468E7BC00466244 /* CardDetailsViewModel.swift in Sources */,
 				5E435DFE2437630B006F3B98 /* BookRepository.swift in Sources */,

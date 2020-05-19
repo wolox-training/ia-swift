@@ -18,9 +18,9 @@
                     <rect key="frame" x="0.0" y="10" width="414" height="454"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="x37-TO-yu4" userLabel="CommentsLoading">
-                    <rect key="frame" x="20" y="210" width="374" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <activityIndicatorView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="x37-TO-yu4" userLabel="CommentsLoading">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </activityIndicatorView>
             </subviews>
             <constraints>

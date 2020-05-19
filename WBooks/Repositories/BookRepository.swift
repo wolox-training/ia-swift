@@ -6,48 +6,28 @@
 //  Copyright © 2020 Wolox. All rights reserved.
 //
 
-import Foundation
 import Result
-import Alamofire
+import Networking
+import Argo
+import ReactiveSwift
 
-class BookRepository {
+class BookRepository: AbstractRepository {
+    private static let fetchBooksPath = "/books"
+    private static let fetchCommentsPath: (Int) -> String = { bookId in "/books/\(bookId)/comments" }
     
-    let baseUrl = URL(string: "https://swift-training-backend.herokuapp.com")!
-    let header: HTTPHeaders = ["Content-Type": "application/json"]
-    
-    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
-        let endpoint = "\(baseUrl)/books"
-        request(endpoint, method: .get).responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    guard let JSONbooks = try? JSONSerialization.data(withJSONObject: value, options: []), let books = try? JSONDecoder().decode([Book].self, from: JSONbooks) else {
-                        onError(BookError.decodeError)
-                        return
-                    }
-                    onSuccess(books)
-                case .failure(let error):
-                    onError(error)
-                }
-            }
+    func fetchBooks() -> SignalProducer<[Book], RepositoryError> {
+        let path = BookRepository.fetchBooksPath
+        
+        return performRequest(method: .get, path: path) { json in
+            return decode(json).toResult()
+        }
     }
     
-    func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
-        let endpoint = "\(baseUrl)/books/\(bookId)/comments"
-        request(endpoint, method: .get).responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    guard let JSONcomments = try? JSONSerialization.data(withJSONObject: value, options: []), let comments = try? JSONDecoder().decode([Comment].self, from: JSONcomments) else {
-                        onError(CommentError.decodeError)
-                        return
-                    }
-                    onSuccess(comments)
-                case .failure(let error):
-                    onError(error)
-                }
-            }
+    func fetchComments(bookId: Int) -> SignalProducer<[Comment], RepositoryError> {
+        let path = BookRepository.fetchCommentsPath(bookId)
+        
+        return performRequest(method: .get, path: path) { json in
+            return decode(json).toResult()
+        }
     }
-}
-
-enum BookError: Error {
-    case decodeError
 }

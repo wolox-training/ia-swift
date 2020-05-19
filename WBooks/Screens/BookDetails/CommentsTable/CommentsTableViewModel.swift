@@ -7,40 +7,53 @@
 //
 
 import Foundation
+import ReactiveSwift
 
 class CommentsTableViewModel {
-    private var _bookRepository = BookRepository()
+    private var _bookRepository = RepositoryBuilder.getDefaultBookRepository()
     private var _bookId: Int
-    private var commentsList: [Comment]
+    private let _commentsList = MutableProperty<[Comment]>([])
+    let commentsTableState = MutableProperty(CommentsTableState.loading)
     
     init(bookId: Int) {
         _bookId = bookId
-        commentsList = []
     }
     
     var numberOfComments: Int {
-        return commentsList.count
+        return _commentsList.value.count
     }
     
     var isEmptyComments: Bool {
-        return commentsList.isEmpty
+        return _commentsList.value.isEmpty
     }
     
     func getCommentCellViewModel(at indexPath: IndexPath) -> CommentCellViewModel {
-        CommentCellViewModel(commentModel: commentsList[indexPath.row])
+        CommentCellViewModel(commentModel: _commentsList.value[indexPath.row])
     }
 }
 
 extension CommentsTableViewModel {
-    func getBookComments(onSuccess: @escaping () -> Void, onError: @escaping () -> Void) {
-        let commentsSuccess: ([Comment]) -> Void = { comments in
-            self.commentsList = comments
-            onSuccess()
+    
+    // MARK: - Api requests
+    
+    func getBookComments() {
+        commentsTableState.value = .loading
+        _bookRepository.fetchComments(bookId: _bookId).startWithResult { [weak self] result in
+            switch result {
+            case .success(let resultArray):
+                self?._commentsList.value = resultArray
+                self?.commentsTableState.value = resultArray.isEmpty ? .empty : .value
+            case .failure(let error):
+               print(error)
+               self?.commentsTableState.value = .error
+            }
         }
-        let commentsError: (Error) -> Void = { error in
-            onError()
-            print(error)
-        }
-        _bookRepository.fetchComments(bookId: _bookId, onSuccess: commentsSuccess, onError: commentsError)
     }
+}
+
+public enum CommentsTableState {
+    case loading
+    case value
+    case error
+    case empty
 }

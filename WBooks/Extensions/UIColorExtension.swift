@@ -18,6 +18,6 @@ extension UIColor {
     static let lightGreen = UIColor(hex: "39CCCD")
     static let lightGray = UIColor(hex: "CACACA")
     static let almostWhite = UIColor(hex: "E4E4E4")
-    static let blueGradient: [CGColor] = [(lightBlue?.cgColor ?? UIColor.blue.cgColor), lightGreen?.cgColor ?? UIColor.green.cgColor]
-    static let grayGradient: [CGColor] = [lightGray?.cgColor ?? UIColor.gray.cgColor, almostWhite?.cgColor ?? UIColor.white.cgColor]
+    static let blueGradient: [UIColor] = [lightBlue!, lightGreen!]
+    static let grayGradient: [UIColor] = [lightGray!, almostWhite!]
 }

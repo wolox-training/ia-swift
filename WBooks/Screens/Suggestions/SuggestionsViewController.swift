@@ -36,5 +36,14 @@ class SuggestionsViewController: BaseViewController {
         super.viewDidLoad()
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "SUGGEST_VIEW_HEADER_TITLE".localized())
+        _view.setupSubmitButton(enabled: false)
+        _suggestionsViewModel.bindFormInputs(bookName: _view.bookName!.isValidInput,
+                                             bookAuthor: _view.bookAuthor!.isValidInput,
+                                             bookYear: _view.bookYear!.isValidInput,
+                                             bookTopic: _view.bookTopic!.isValidInput,
+                                             bookDescription: _view.bookDescription!.isValidInput)
+        _suggestionsViewModel.isFormComplete.signal.observeValues { valid in
+            self._view.setupSubmitButton(enabled: valid)
+        }
     }
 }

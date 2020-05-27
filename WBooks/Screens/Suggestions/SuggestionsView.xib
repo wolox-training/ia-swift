@@ -39,6 +39,9 @@
                                             <rect key="frame" x="0.0" y="30" width="296" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="notEmpty" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbb-yr-cmO" userLabel="Author" customClass="CustomFieldInput" customModule="WBooks" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="137" width="296" height="34"/>
@@ -103,7 +106,12 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="bookAuthor" destination="Vbb-yr-cmO" id="2eM-ff-0W8"/>
+                <outlet property="bookDescription" destination="uVG-L9-wDi" id="73b-jf-j2I"/>
                 <outlet property="bookImage" destination="bgq-fE-hrE" id="U56-F1-yaM"/>
+                <outlet property="bookName" destination="SOs-3o-eye" id="sfu-k8-aKa"/>
+                <outlet property="bookTopic" destination="fOG-oH-Zro" id="JBo-07-Y2B"/>
+                <outlet property="bookYear" destination="TFJ-RB-mZG" id="3AF-51-tbV"/>
                 <outlet property="submitButton" destination="ofb-39-Uk5" id="eD2-Jb-ivN"/>
                 <outlet property="suggestCard" destination="oMK-ED-qfG" id="4gR-QG-tgR"/>
             </connections>

@@ -19,7 +19,7 @@ class CardDetailsViewModel {
     }
     
     var id: Int {
-        _bookModel.id
+        _bookModel.id!
     }
     
     var status: BookStatus {
@@ -56,7 +56,7 @@ extension CardDetailsViewModel {
         rentState.value = .loading
         let from = Date()
         let to = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
-        let rentModel = Rent(bookId: _bookModel.id, from: from, to: to)
+        let rentModel = Rent(bookId: _bookModel.id!, from: from, to: to)
         _userRepository.rentBook(rentModel: rentModel).startWithResult { [weak self] result in
             switch result {
             case .success(let result):

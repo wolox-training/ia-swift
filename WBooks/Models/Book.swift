@@ -12,12 +12,12 @@ import Runes
 
 struct Book {
     
-    let id: Int
-    let title: String
-    let author: String
-    let genre: String
-    let year: String
-    let image: String?
+    let id: Int?
+    var title: String
+    var author: String
+    var genre: String
+    var year: String
+    var image: String?
     var status: String
 
 }
@@ -25,7 +25,7 @@ struct Book {
 extension Book: Argo.Decodable {
     static func decode(_ json: JSON) -> Decoded<Book> {
         return curry(Book.init)
-        <^> json <| "id"
+        <^> json <|? "id"
         <*> json <| "title"
         <*> json <| "author"
         <*> json <| "genre"

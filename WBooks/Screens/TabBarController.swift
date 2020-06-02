@@ -24,7 +24,8 @@ class TabBarController: UITabBarController {
         let wishList = WishListViewController()
         wishList.tabBarItem = UITabBarItem(title: "WISH_LIST_TAB_TITLE".localized(), image: UIImage.wishlistIcon, tag: 1)
         wishList.tabBarItem.selectedImage = UIImage.wishlistActiveIcon
-        let addNew = WBooksNavigationController(rootViewController: SuggestionsViewController(viewModel: SuggestionsViewModel()))
+        let bookModel: Book = Book(id: nil, title: "", author: "", genre: "", year: "", image: nil, status: BookStatus.available.rawValue)
+        let addNew = WBooksNavigationController(rootViewController: SuggestionsViewController(viewModel: SuggestionsViewModel(bookModel: bookModel)))
         addNew.tabBarItem = UITabBarItem(title: "ADD_NEW_TAB_TITLE".localized(), image: UIImage.addNewIcon, tag: 2)
         addNew.tabBarItem.selectedImage = UIImage.addNewActiveIcon
         let rentals = WishListViewController()

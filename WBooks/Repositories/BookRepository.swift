@@ -30,4 +30,18 @@ class BookRepository: AbstractRepository {
             return decode(json).toResult()
         }
     }
+    
+    func postBookSugestion(book: Book) -> SignalProducer<Book, RepositoryError> {
+        let path = BookRepository.fetchBooksPath
+        let params: [String: Any] = [
+            "title": book.title,
+            "author": book.author,
+            "year": book.year,
+            "genre": book.genre,
+            "image": book.image ?? ""
+        ]
+        return performRequest(method: .post, path: path, parameters: params) { json in
+            return decode(json).toResult()
+        }
+    }
 }

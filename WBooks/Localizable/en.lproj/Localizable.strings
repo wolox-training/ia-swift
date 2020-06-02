@@ -37,4 +37,8 @@
 // MARK: Alert Messages
 
 "REQUEST_ERROR_TITLE" = "Loading error";
-"REQUEST_ERROR_BODY" = "An error was ocurred when trying to get the information. Please try egain later.";
+"REQUEST_ERROR_BODY" = "An error was ocurred when trying to get the information. Please try again later.";
+
+// MARK: Suggest Book
+
+"SUGGEST_SUCCESS" = "Suggest was uploaded successfully!";

@@ -37,3 +37,7 @@
 
 "REQUEST_ERROR_TITLE" = "Error al cargar";
 "REQUEST_ERROR_BODY" = "Ha ocurrido un error tratando de obtener la información. Por favor, vuelve a intentarlo más tarde.";
+
+// MARK: Suggest Book
+
+"SUGGEST_SUCCESS" = "La sugerencia fue cargada de forma exitosa!";

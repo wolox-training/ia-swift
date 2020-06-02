@@ -37,13 +37,31 @@ class SuggestionsViewController: BaseViewController {
         view.layer.backgroundColor = UIColor.creamBlue?.cgColor
         setTitle(headerTitle: "SUGGEST_VIEW_HEADER_TITLE".localized())
         _view.setupSubmitButton(enabled: false)
-        _suggestionsViewModel.bindFormInputs(bookName: _view.bookName!.isValidInput,
-                                             bookAuthor: _view.bookAuthor!.isValidInput,
-                                             bookYear: _view.bookYear!.isValidInput,
-                                             bookTopic: _view.bookTopic!.isValidInput,
-                                             bookDescription: _view.bookDescription!.isValidInput)
+        _suggestionsViewModel.sugestState.signal.observeValues(setupSuggestStatus)
+        _suggestionsViewModel.bindFormInputs(bookName: _view.bookName!,
+                                             bookAuthor: _view.bookAuthor!,
+                                             bookYear: _view.bookYear!,
+                                             bookGenre: _view.bookGenre!)
         _suggestionsViewModel.isFormComplete.signal.observeValues { valid in
             self._view.setupSubmitButton(enabled: valid)
+        }
+        _view.submitButton.reactive.controlEvents(.touchUpInside).observeValues { _ in
+            self._suggestionsViewModel.suggestBook()
+        }
+    }
+    
+    func setupSuggestStatus(status: SuggestResultState) {
+        switch status {
+        case .success:
+            self._view.updateSuggestionLoading(isLoading: false)
+            let alert = UIAlertController.createErrorAlert(message: "SUGGEST_SUCCESS".localized())
+            present(alert, animated: true)
+        case .error:
+            self._view.updateSuggestionLoading(isLoading: false)
+            let alert = UIAlertController.createErrorAlert(message: "REQUEST_ERROR_BODY".localized())
+            present(alert, animated: true)
+        case .loading:
+            self._view.updateSuggestionLoading(isLoading: true)
         }
     }
 }

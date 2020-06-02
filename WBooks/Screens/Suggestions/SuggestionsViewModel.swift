@@ -24,7 +24,6 @@ class SuggestionsViewModel {
         let s5: Signal<Bool, Never> = bookDescription.signal.map { $0 }
         
         let combination = Signal<Bool, Never>.combineLatest(s1, s2, s3, s4, s5)
-        print(combination)
         combination.observeValues { (arg) in
             let (name, author, year, topic, desc) =  arg
             self.isFormComplete.value = name && author && year && topic && desc

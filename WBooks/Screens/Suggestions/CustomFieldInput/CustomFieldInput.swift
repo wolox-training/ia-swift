@@ -12,12 +12,7 @@ import ReactiveSwift
 @IBDesignable
 class CustomFieldInput: UITextField {
     private var _borderView: UIView = UIView()
-    var isValidInput = MutableProperty<Bool>(true) {
-        didSet {
-            updateBorderStyle()
-        }
-    }
-    // var validator: ((String) -> Bool)?
+    var isValidInput = MutableProperty<Bool>(true)
     
     // MARK: - Inspectable elements to set validator types. Just one at the moment
     @IBInspectable var notEmpty: Bool = true
@@ -52,6 +47,7 @@ class CustomFieldInput: UITextField {
         if notEmpty {
             self.isValidInput.value = text.isNotEmpty
         }
+        updateBorderStyle()
     }
     
 }
